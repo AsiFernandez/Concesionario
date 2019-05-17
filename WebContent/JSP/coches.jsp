@@ -19,6 +19,9 @@ try{
 	Connection Con = DriverManager.getConnection("url", "ConexConcesionario", "root");
 	Statement st = con.createStatement();
 	ResultSet rs = st.executeQuery("SELECT * FROM vehiculos v JOIN coche c WHERE v.matricula = c.matricula");
+}catch(Exception e){
+	e.printStackTrace();
+}
 %>
     <table>
   <tr>
