@@ -96,6 +96,7 @@
 		}
 		%>
 		</table>
+		<a href="insertar.jsp">klk</a>
     </div>
     <!-- /.container -->
 	<!-- Footer -->
