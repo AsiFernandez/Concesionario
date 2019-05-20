@@ -61,6 +61,7 @@
 	<div class="container">
 		<br>
 		<h1>Coches</h1>
+		<a href="insertCoches.jsp" class="btn btn-primary btn-lg" id="insertar">Insertar coche nuevo</a>
 		<table>
 			<tr>
  			   	<th>Matricula</th>
@@ -90,7 +91,7 @@
 				<td><%=rs.getInt("numSerie")%></td>
 				<td><%=rs.getString("numPuertas")%></td>
 				<td><%=rs.getInt("capacidadMaletero")%></td>
-				<td><a href="delete.jsp?Matricula=<%=rs.getString("Matricula") %>" class="btn btn-primary btn-lg"> Comprar Camion </a></td>
+				<td><a href="delete.jsp?Matricula=<%=rs.getString("Matricula") %>" class="btn btn-primary btn-lg">Comprar coche</a></td>
 			</tr>
 		<%}
 		}catch(Exception e){
@@ -98,7 +99,6 @@
 		}
 		%>
 		</table>
-		<a href="insertar.jsp">klk</a>
     </div>
     <!-- /.container -->
 	<!-- Footer -->

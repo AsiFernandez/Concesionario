@@ -60,6 +60,7 @@
 	<div class="container">
 		<br>
 		<h1>Camiones</h1>
+		<a href="insertCamiones.jsp" class="btn btn-primary btn-lg" id="insertar">Insertar camion nuevo</a>
  		 <table>
   			<tr>
     			<th>Matricula</th>
@@ -89,7 +90,7 @@
 				<td><%=rs.getInt("numSerie")%></td>
 				<td><%=rs.getInt("carga")%></td>
 				<td><%=rs.getString("tipoMercancia")%></td>
-				<td><a href="delete.jsp?Matricula=<%=rs.getString("Matricula") %>" class="btn btn-primary btn-lg"> Comprar Camion </a></td>
+				<td><a href="delete.jsp?Matricula=<%=rs.getString("Matricula") %>" class="btn btn-primary btn-lg">Comprar Camion</a></td>
 			</tr>
 		<% }
 		}catch(Exception e){
