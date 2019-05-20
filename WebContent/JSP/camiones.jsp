@@ -60,7 +60,7 @@
 <!-- Page Content -->
 	<div class="container">
 		<br>
-		<h1>Coches</h1>
+		<h1>Camiones</h1>
  		 <table>
   			<tr>
     			<th>Matricula</th>
@@ -68,9 +68,9 @@
     			<th>Color</th>
     			<th>numero de Asientos</th>
     			<th>Precio</th>
-    			<th>Serie</th>
-				<th>Numero de Puertas</th>
-				<th>Capacidad del Maletero</th>
+    			<th>Numero de serie</th>
+				<th>Carga</th>
+				<th>Tipo de mercancia</th>
  			</tr>
  		<%
 		try{

@@ -68,7 +68,7 @@
     			<th>Color</th>
     			<th>numero de Asientos</th>
     			<th>Precio</th>
-    			<th>Serie</th>
+    			<th>Numero de serie</th>
 				<th>Numero de Puertas</th>
 				<th>Capacidad del Maletero</th>
  			</tr>
