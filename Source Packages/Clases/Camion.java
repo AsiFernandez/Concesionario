@@ -1,3 +1,4 @@
+package Clases;
 
 public class Camion extends Vehiculo {
 	 
