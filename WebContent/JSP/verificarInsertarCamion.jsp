@@ -1,6 +1,30 @@
 <%@ page import="java.util.*"%>
 <%@ page import="java.sql.*"%>
+<%@ page import="javax.servlet.http.*,javax.servlet.*" %>
 <%@ page language="java" contentType="text/html"%>
+<%
+		String user = "ConexConcesionario";
+		String contra = "zubiri";
+		String url ="jdbc:mysql://10.18.124.58:3306/";
+		String database = "concesionario";
+		String driverDB = "com.mysql.jdbc.Driver";
+		Connection conn = null;
+		Statement st = null;
+		ResultSet rs = null;
+		try {
+			Class.forName(driverDB);
+			conn = DriverManager.getConnection(url+database, user, contra);
+			st = conn.createStatement();
+		} catch(Exception ex){
+		%>
+		<font color="red">
+		<%
+			out.println("No se puede conectar con la base de datos");
+		%>
+		</font>
+		<%
+		}
+%>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -43,29 +67,38 @@
 </nav>
 <!-- Page Content -->
 	<div class="container">
-		<h1>Camiones</h1>
-        <form method="post" action="verificarInsertarCamion.jsp">
-        	<h3>Datos a insertar</h3>
-        	<p>Matricula:</p>
-        	<input name="matricula">
-        	<p>Numero de bastidor:</p>
-        	<input name="numbast">
-          	<p>Color:</p>
-            <input name="nombre">
-            <p>Numero de Asientos:</p>
-            <input name="numAsientos">
-            <p>Precio:</p>
-            <input name="precio">
-            <p>Numero de serie:</p>
-        	<input name="numSerie">
-            <p>Carga:</p>
-            <input name="carga">
-            <p>Tipo de mercancia:</p>
-            <input name="mercancia">
-            <br>
-            <br>
-            <input type="submit" value="Insertar Datos">
-        </form>
+		<h1>Coches</h1>
+		<%
+		try {
+			 String matricula = request.getParameter("matricula");
+			 String numbast = request.getParameter("numbast");
+			 String color = request.getParameter("color");
+		     String numAsientos = request.getParameter("numAsientos");
+		     String precio = request.getParameter("precio");
+		     String numSerie = request.getParameter("numSerie");
+		     String carga = request.getParameter("carga");
+		     String mercancia = request.getParameter("mercancia");
+			 int i=st.executeUpdate("insert into personas(Nombre,Apellido,Edad)values('"+matricula+"','"+numbast+"','"+color+"','"+numAsientos+"','"+precio+"','"+numSerie+"','"+carga+"','"+mercancia+"')");
+		%>
+		<font size="" color="green">
+		<%
+		out.println("Se ha agregado el camion con matricula "+matricula+" correctamente");
+		%>
+		</font>
+		<%
+		} catch(Exception ex){
+		%>
+		<font color="red">
+		<%
+			out.println("No se puede añadir correctamente al camion, pruebe de nuevo.");
+		%>
+		</font>
+		<%
+		}
+		%>
+		<form method="post" action="index.jsp">
+			<input type="button" value="Volver" onclick="location.href='index.jsp'">
+		</form>
     </div>
     <!-- /.container -->
 	<!-- Footer -->
