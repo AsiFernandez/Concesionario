@@ -480,8 +480,10 @@ mark,
 
 .blockquote-footer {
   display: block;
-  font-size: 80%;
+  font-size: 70%;
   color: #666;
+ 
+  
 }
 
 .blockquote-footer::before {
