@@ -90,7 +90,7 @@
 				<td><%=rs.getInt("numSerie")%></td>
 				<td><%=rs.getInt("carga")%></td>
 				<td><%=rs.getString("tipoMercancia")%></td>
-				<td><a href="delete.jsp?Matricula=<%=rs.getString("Matricula") %>" class="btn btn-primary btn-lg">Comprar Camion</a></td>
+				<td><a href="deleteCamiones.jsp?Matricula=<%=rs.getString("Matricula") %>" class="btn btn-primary btn-lg">Comprar Camion</a></td>
 			</tr>
 		<% }
 		}catch(Exception e){
