@@ -1,6 +1,5 @@
 <%@ page import="java.util.*"%>
 <%@ page import="java.sql.*"%>
-<%@ page import="javax.servlet.http.*,javax.servlet.*" %>
 <%@ page language="java" contentType="text/html"%>
 <%
 		String user = "ConexConcesionario";
@@ -71,6 +70,7 @@
     			<th>Numero de serie</th>
 				<th>Carga</th>
 				<th>Tipo de mercancia</th>
+				<th>Comprar Camion</th>
  			</tr>
  		<%
 		try{
@@ -89,6 +89,7 @@
 				<td><%=rs.getInt("numSerie")%></td>
 				<td><%=rs.getInt("carga")%></td>
 				<td><%=rs.getString("tipoMercancia")%></td>
+				<td><a href="delete.jsp?Matricula=<%=rs.getString("Matricula") %>" class="btn btn-primary btn-lg"> Comprar Camion </a></td>
 			</tr>
 		<% }
 		}catch(Exception e){
