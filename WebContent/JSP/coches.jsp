@@ -71,6 +71,7 @@
     			<th>Numero de serie</th>
 				<th>Numero de Puertas</th>
 				<th>Capacidad del Maletero</th>
+				<th>Comprar Coche</th>
  			</tr>
 		<%
 		try{
@@ -89,6 +90,7 @@
 				<td><%=rs.getInt("numSerie")%></td>
 				<td><%=rs.getString("numPuertas")%></td>
 				<td><%=rs.getInt("capacidadMaletero")%></td>
+				<td><a href="delete.jsp?Matricula=<%=rs.getString("Matricula") %>" class="btn btn-primary btn-lg"> Comprar Camion </a></td>
 			</tr>
 		<%}
 		}catch(Exception e){
