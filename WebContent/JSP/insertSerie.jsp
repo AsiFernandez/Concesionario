@@ -47,8 +47,8 @@
 	</nav>
 	<!-- Page Content -->
 	<div class="container">
-		<h1>Coches</h1>
-		<form method="post" action="verificarInsertarCoche.jsp">
+		<h1>Series</h1>
+		<form method="post" action="verificarInsertarSerie.jsp">
 			<h4>Serie</h4>
 			<p>Numero de serie:</p>
 			<input name="numSerie">
@@ -58,22 +58,9 @@
 			<input name="modelo">
 			<p>Año de fabricacion:</p>
 			<input name="añoFab"> <br> <br>
-			<h4>Datos a insertar</h4>
-			<p>Matricula:</p>
-			<input name="matricula">
-			<p>Numero de bastidor:</p>
-			<input name="numbast">
-			<p>Color:</p>
-			<input name="color">
-			<p>Numero de Asientos:</p>
-			<input name="numAsientos">
-			<p>Precio:</p>
-			<input name="precio">
-			<p>Numero de puertas:</p>
-			<input name="puertas">
-			<p>Capacidad del maletero:</p>
-			<input name="maletero"> <br> <br> <input
-				type="submit" value="Insertar Datos"> <br> <br>
+			<br>
+			<br> 
+			<input type="submit" value="Insertar Datos"> <br> <br>
 		</form>
 	</div>
 	<!-- /.container -->

@@ -55,6 +55,8 @@
 				</li>
 				<li class="nav-item"><a class="nav-link" href="camiones.jsp">Camiones</a>
 				</li>
+				<li class="nav-item"><a class="nav-link" href="series.jsp">Series</a>
+				</li>
 			</ul>
 		</div>
 	</nav>

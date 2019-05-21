@@ -1,20 +1,28 @@
 <%@ page import="java.util.*"%>
 <%@ page import="java.sql.*"%>
+<%@ page import="javax.servlet.http.*,javax.servlet.*"%>
 <%@ page language="java" contentType="text/html"%>
 <%
-	String user = "ConexConcesionario";
-	String contra = "zubiri";
-	String url = "jdbc:mysql://10.18.124.58:3306/";
-	String database = "concesionario";
-	String driverDB = "com.mysql.jdbc.Driver";
-	try {
-		Class.forName(driverDB);
-	} catch (Exception ex) {
-
-	}
-	Connection conn = null;
-	Statement st = null;
-	ResultSet rs = null;
+		String user = "ConexConcesionario";
+		String contra = "zubiri";
+		String url ="jdbc:mysql://10.18.124.58:3306/";
+		String database = "concesionario";
+		String driverDB = "com.mysql.jdbc.Driver";
+		Connection conn = null;
+		Statement st = null;
+		ResultSet rs = null;
+		try {
+			Class.forName(driverDB);
+			conn = DriverManager.getConnection(url+database, user, contra);
+			st = conn.createStatement();
+		} catch(Exception ex){
+		%>
+<font color="red"> <%
+			out.println("No se puede conectar con la base de datos");
+		%>
+</font>
+<%
+		}
 %>
 <!DOCTYPE html>
 <html lang="es">
@@ -53,7 +61,7 @@
 				</li>
 				<li class="nav-item"><a class="nav-link" href="coches.jsp">Coches</a>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="camiones.jsp">Camiones <span class="sr-only">(current)</span></a>
+				<li class="nav-item"><a class="nav-link" href="camiones.jsp">Camiones</a>
 				</li>
 				<li class="nav-item"><a class="nav-link" href="series.jsp">Series</a>
 				</li>
@@ -62,54 +70,33 @@
 	</nav>
 	<!-- Page Content -->
 	<div class="container">
-		<br>
-		<h1>Camiones</h1>
-		<a href="insertCamiones.jsp" class="btn btn-primary btn-lg"
-			id="insertar">Insertar camion nuevo</a>
-		<table>
-			<tr>
-				<th>Matricula</th>
-				<th>Numero de Bastidor</th>
-				<th>Color</th>
-				<th>numero de Asientos</th>
-				<th>Precio</th>
-				<th>Numero de serie</th>
-				<th>Carga</th>
-				<th>Tipo de mercancia</th>
-				<th>Comprar Camion</th>
-				<th>Editar Camion</th>
-			</tr>
-			<%
-				try {
-					conn = DriverManager.getConnection(url + database, user, contra);
-					st = conn.createStatement();
-					String sql = "select * from vehiculos v, camion c where v.Matricula = c.Matricula";
-					rs = st.executeQuery(sql);
-					while (rs.next()) {
-			%>
-			<tr>
-				<td><%=rs.getString("Matricula")%></td>
-				<td><%=rs.getInt("numBastidor")%></td>
-				<td><%=rs.getString("color")%></td>
-				<td><%=rs.getInt("numAsientos")%></td>
-				<td><%=rs.getFloat("precio")%></td>
-				<td><%=rs.getInt("numSerie")%></td>
-				<td><%=rs.getInt("carga")%></td>
-				<td><%=rs.getString("tipoMercancia")%></td>
-				<td><a style="font-size: 15px;"
-					href="comprarCamiones.jsp?Matricula=<%=rs.getString("Matricula")%>"
-					class="btn btn-primary btn-lg">Comprar</a></td>
-				<td><a style="font-size: 15px;"
-					href="editarCamiones.jsp?Matricula=<%=rs.getString("Matricula")%>"
-					class="btn btn-primary btn-lg">Editar</a></td>
-			</tr>
-			<%
-				}
-				} catch (Exception e) {
-					System.out.println(e.getMessage());
-				}
-			%>
-		</table>
+		<h1>Series</h1>
+		<%
+		try {
+			String numSerie = request.getParameter("numSerie");
+			String marca = request.getParameter("marca");
+		    String modelo = request.getParameter("modelo");
+		    String añoFab = request.getParameter("añoFab");
+			st.executeUpdate("insert into serie(NumSerie,marca,modelo,año_fab)values('"+numSerie+"','"+marca+"','"+modelo+"','"+añoFab+"')");
+		%>
+		<font size="" color="green"> <%
+		out.println("Se ha agregado la serie "+numSerie+" correctamente");
+		%>
+		</font>
+		<%
+		} catch(Exception ex){
+		%>
+		<font color="red"> <%
+			out.println("No se puede añadir correctamente la serie, pruebe de nuevo.");
+		%>
+		</font>
+		<%
+		}
+		%>
+		<form method="post" action="index.jsp">
+			<input type="button" value="Volver"
+				onclick="location.href='series.jsp'">
+		</form>
 	</div>
 	<!-- /.container -->
 	<!-- Footer -->
