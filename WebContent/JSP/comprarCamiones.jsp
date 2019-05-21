@@ -32,7 +32,8 @@
 			con = DriverManager.getConnection(url + db, "ConexConcesionario", "zubiri");
 			try {
 				Statement st = con.createStatement();
-				String query = "SELECT v.Matricula,numBastidor,color,numAsientos,precio,numserie,carga,tipoMercancia FROM Vehiculos v, camion c WHERE (v.Matricula = c.Matricula) and v.Matricula='"+matricula+"'";
+				String query = "SELECT v.Matricula,numBastidor,color,numAsientos,precio,numserie,carga,tipoMercancia FROM Vehiculos v, camion c WHERE (v.Matricula = c.Matricula) and v.Matricula='"
+						+ matricula + "'";
 				ResultSet rs = st.executeQuery(query);
 				while (rs.next()) {
 	%>

@@ -94,7 +94,7 @@
 				<td><%=rs.getInt("carga")%></td>
 				<td><%=rs.getString("tipoMercancia")%></td>
 				<td><a
-					href="deleteCamiones.jsp?Matricula=<%=rs.getString("Matricula")%>"
+					href="comprarCamiones.jsp?Matricula=<%=rs.getString("Matricula")%>"
 					class="btn btn-primary btn-lg">Comprar Camion</a></td>
 			</tr>
 			<%
