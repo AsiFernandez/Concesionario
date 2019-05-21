@@ -18,7 +18,6 @@
 %>
 <!DOCTYPE html>
 <html lang="es">
-
   <head>
 	<!-- https://bootswatch.com/materia/ -->
     <meta charset="utf-8">
@@ -90,7 +89,7 @@
 				<td><%=rs.getInt("numSerie")%></td>
 				<td><%=rs.getInt("carga")%></td>
 				<td><%=rs.getString("tipoMercancia")%></td>
-				<td><a href="comprarCamion.jsp?Matricula=<%=rs.getString("Matricula") %>" class="btn btn-primary btn-lg">Comprar Camion</a></td>
+				<td><a href="comprarCamion.jsp?Matricula=<%=rs.getString("Matricula")%>" class="btn btn-primary btn-lg">Comprar Camion</a></td>
 			</tr>
 		<% }
 		}catch(Exception e){
