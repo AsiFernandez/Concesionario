@@ -1,6 +1,19 @@
 <%@ page import="java.util.*"%>
 <%@ page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html"%>
+<%
+	String matricula = request.getParameter("Matricula");
+	Connection con = null;
+	String url = "jdbc:mysql://10.18.124.58:3306/";
+	String db = "concesionario";
+	String driver = "com.mysql.jdbc.Driver";
+	try {
+		Class.forName(driver);
+		con = DriverManager.getConnection(url + db, "ConexConcesionario", "zubiri");
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,20 +35,12 @@
 </head>
 <body>
 	<%
-		String matricula = request.getParameter("Matricula");
-		Connection con = null;
-		String url = "jdbc:mysql://10.18.124.58:3306/";
-		String db = "concesionario";
-		String driver = "com.mysql.jdbc.Driver";
 		try {
-			Class.forName(driver);
-			con = DriverManager.getConnection(url + db, "ConexConcesionario", "zubiri");
-			try {
-				Statement st = con.createStatement();
-				String query = "SELECT v.Matricula,numBastidor,color,numAsientos,precio,numserie,carga,tipoMercancia FROM Vehiculos v, camion c WHERE (v.Matricula = c.Matricula) and v.Matricula='"
-						+ matricula + "'";
-				ResultSet rs = st.executeQuery(query);
-				while (rs.next()) {
+			Statement st = con.createStatement();
+			String query = "SELECT v.Matricula,numBastidor,color,numAsientos,precio,numserie,carga,tipoMercancia FROM Vehiculos v, camion c WHERE (v.Matricula = c.Matricula) and v.Matricula='"
+					+ matricula + "'";
+			ResultSet rs = st.executeQuery(query);
+			while (rs.next()) {
 	%>
 
 
@@ -95,33 +100,17 @@
 								size="15"></td>
 						</tr>
 					</table>
-					<input type="submit" value="Update" name="submit"> <input
-						type="reset" value="Reset" name="reset">
 				</form>
 			</td>
 		</tr>
 	</table>
-
-
 	<%
 		}
-
-				rs.close();
-				con.close();
-
-			} catch (SQLException ex) {
-				System.out.println(ex.getMessage());
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
+		} catch (SQLException ex) {
+			System.out.println(ex.getMessage());
 		}
 	%>
-	<%
-		out.println("<br>");
-		out.println("<a href='list.jsp'> RETURN TO MAIN PAGE </a>");
-	%>
-
-
+		<a href="../confirmarCompraCamiones.jsp" class="btn btn-primary btn-lg">Confirmar</a>
 </body>
 <footer class="py-5 bg-dark">
 	<div class="container">
