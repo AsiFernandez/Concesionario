@@ -47,10 +47,10 @@
 	<table border="1" width="50%">
 		<tr>
 			<td width="100%">
-				<form method="POST" action="update.jsp">
+				<form method="POST" action="confirmarCompraCamiones.jsp">
 					<input type="hidden" name="matricula"
 						value="<%=request.getParameter("matricula")%>">
-					<h2 align="center">UPDATE RECORD</h2>
+					<h2 align="center">COMPRAR CAMION</h2>
 					<table border="2" width="100%" bgColor="lightgreen">
 						<tr>
 							<td width="50%" bgColor="lightgreen"><b>Matricula:</b></td>
@@ -110,7 +110,7 @@
 			System.out.println(ex.getMessage());
 		}
 	%>
-		<a href="../confirmarCompraCamiones.jsp" class="btn btn-primary btn-lg">Confirmar</a>
+		<a href="confirmarCompraCamiones.jsp" class="btn btn-primary btn-lg">Confirmar</a>
 </body>
 <footer class="py-5 bg-dark">
 	<div class="container">
