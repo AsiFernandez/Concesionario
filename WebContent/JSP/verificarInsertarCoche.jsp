@@ -72,9 +72,6 @@
 		<%
 		try {
 			String numSerie = request.getParameter("numSerie");
-			String marca = request.getParameter("marca");
-		    String modelo = request.getParameter("modelo");
-		    String añoFab = request.getParameter("añoFab");
 			String matricula = request.getParameter("matricula");
 			String numbast = request.getParameter("numbast");
 			String color = request.getParameter("color");
@@ -82,7 +79,6 @@
 		    String precio = request.getParameter("precio");
 		    String puertas = request.getParameter("puertas");
 		    String maletero = request.getParameter("maletero");
-			st.executeUpdate("insert into serie(NumSerie,marca,modelo,año_fab)values('"+numSerie+"','"+marca+"','"+modelo+"','"+añoFab+"')");
 			st.executeUpdate("insert into vehiculos(Matricula,numBastidor,color,numAsientos,precio,numSerie)values('"+matricula+"','"+numbast+"','"+color+"','"+numAsientos+"','"+precio+"','"+numSerie+"')");
 			st.executeUpdate("insert into coche(Matricula,numPuertas,capacidadMaletero)values('"+matricula+"','"+puertas+"','"+maletero+"')");
 		%>

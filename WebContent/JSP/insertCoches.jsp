@@ -49,15 +49,6 @@
 	<div class="container">
 		<h1>Coches</h1>
 		<form method="post" action="verificarInsertarCoche.jsp">
-			<h4>Serie</h4>
-			<p>Numero de serie:</p>
-			<input name="numSerie">
-			<p>Marca:</p>
-			<input name="marca">
-			<p>Modelo:</p>
-			<input name="modelo">
-			<p>Año de fabricacion:</p>
-			<input name="añoFab"> <br> <br>
 			<h4>Datos a insertar</h4>
 			<p>Matricula:</p>
 			<input name="matricula">
@@ -72,8 +63,10 @@
 			<p>Numero de puertas:</p>
 			<input name="puertas">
 			<p>Capacidad del maletero:</p>
-			<input name="maletero"> <br> <br> <input
-				type="submit" value="Insertar Datos"> <br> <br>
+			<input name="maletero"> 
+			<p>Numero de serie:</p>
+			<input name="numSerie">
+			<br> <br> <input type="submit" value="Insertar Datos"> <br> <br>
 		</form>
 	</div>
 	<!-- /.container -->
