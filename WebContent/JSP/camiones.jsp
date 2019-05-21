@@ -49,11 +49,11 @@
 		<div class="collapse navbar-collapse" id="navbarColor01">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active"><a class="nav-link"
-					href="../index.html">Inicio <span class="sr-only">(current)</span></a>
+					href="../index.html">Inicio</a>
 				</li>
 				<li class="nav-item"><a class="nav-link" href="coches.jsp">Coches</a>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="camiones.jsp">Camiones</a>
+				<li class="nav-item"><a class="nav-link" href="camiones.jsp">Camiones <span class="sr-only">(current)</span></a>
 				</li>
 			</ul>
 		</div>

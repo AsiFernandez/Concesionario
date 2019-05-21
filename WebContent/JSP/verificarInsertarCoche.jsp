@@ -68,7 +68,7 @@
 	</nav>
 	<!-- Page Content -->
 	<div class="container">
-		<h1>Camiones</h1>
+		<h1>Coche</h1>
 		<%
 		try {
 			String numSerie = request.getParameter("numSerie");
@@ -80,18 +80,19 @@
 			String color = request.getParameter("color");
 		    String numAsientos = request.getParameter("numAsientos");
 		    String precio = request.getParameter("precio");
-		    String carga = request.getParameter("carga");
-		    String mercancia = request.getParameter("mercancia");
+		    String puertas = request.getParameter("puertas");
+		    String maletero = request.getParameter("maletero");
 			st.executeUpdate("insert into serie(NumSerie,marca,modelo,año_fab)values('"+numSerie+"','"+marca+"','"+modelo+"','"+añoFab+"')");
 			st.executeUpdate("insert into vehiculos(Matricula,numBastidor,color,numAsientos,precio,numSerie)values('"+matricula+"','"+numbast+"','"+color+"','"+numAsientos+"','"+precio+"','"+numSerie+"')");
-			st.executeUpdate("insert into camion(Matricula,carga,tipoMercancia)values('"+matricula+"','"+carga+"','"+mercancia+"')");
+			st.executeUpdate("insert into coche(Matricula,numPuertas,capacidadMaletero)values('"+matricula+"','"+puertas+"','"+maletero+"')");
 		%>
 		<font size="" color="green"> <%
-		out.println("Se ha agregado el camion con matricula "+matricula+" correctamente");
+		out.println("Se ha agregado el coche con matricula "+matricula+" correctamente");
 		%>
 		</font>
 		<%
 		} catch(Exception ex){
+			System.out.println(ex.getMessage());
 		%>
 		<font color="red"> <%
 			out.println("No se puede añadir correctamente al camion, pruebe de nuevo.");
@@ -102,7 +103,7 @@
 		%>
 		<form method="post" action="index.jsp">
 			<input type="button" value="Volver"
-				onclick="location.href='camiones.jsp'">
+				onclick="location.href='coches.jsp'">
 		</form>
 	</div>
 	<!-- /.container -->
