@@ -1,19 +1,6 @@
 <%@ page import="java.util.*"%>
 <%@ page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html"%>
-<%
-	String matricula = request.getParameter("Matricula");
-	Connection con = null;
-	String url = "jdbc:mysql://10.18.124.58/";
-	String db = "concesionario";
-	String driver = "com.mysql.jdbc.Driver";
-	try {
-		Class.forName(driver);
-		con = DriverManager.getConnection(url + db, "ConexConcesionario", "zubiri");
-	} catch (Exception e) {
-		e.printStackTrace();
-	}
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,24 +21,39 @@
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
+<% 
+String strId =request.getParameter("id");
+int id = Integer.parseInt(strId);
+Connection con = null;
+String url = "jdbc:mysql://10.18.124.58:3306/";
+String db = "users";
+String driver = "com.mysql.jdbc.Driver";
+try{
+Class.forName(driver);
+con = DriverManager.getConnection(url+db,"root","");
+try{
+Statement st = con.createStatement();
+String name=request.getParameter("name");
+int in = st.executeUpdate("DELETE FROM student_info WHERE id='"+id+"'");
+con.close();
+out.println("<p> The record is successfully deleted. </p>");
+out.println("<br>");
+out.println("<a href='list.jsp'> RETURN TO MAIN PAGE </a>");
+}
+catch (SQLException ex){
+System.out.println("SQL statement is not executed!");
+}
+}
+catch (Exception e){
+e.printStackTrace();
+}
+%>
 
 	<%
-		String matriculaS = request.getParameter("Matricula");
-		int i=0;
 		try {
-			Class.forName(driver);
-			con = DriverManager.getConnection(url + db, "ConexConcesionario", "zubiri");
-			try {
-				Statement st = con.createStatement();
-				i = st.executeUpdate("DELETE  FROM vehiculos WHERE Matricula='" + matriculaS+"'");
-				con.close();
-				out.println("<p> The record is successfully deleted. </p>");
-				out.println("<br>");
-				out.println("<a href='camiones.jsp'> RETURN TO MAIN PAGE </a>");
-			} catch (SQLException ex) {
-				System.out.println(ex.getMessage());
-			}
-		} catch (Exception e) {
+			int in = st.executeUpdate("DELETE FROM vehiculos WHERE Matricula = '"+matricula+"'");
+			int in2 = st.executeUpdate("DELETE FROM camion WHERE Matricula = '"+matricula+"'");
+		} catch (SQLException e) {
 			e.getMessage();
 		}
 	%>
