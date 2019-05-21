@@ -25,21 +25,22 @@
 	<body>
 		<%
 		try{
-			String matricula = request.getParameter("Matricula");
+			String matricula = request.getParameter("matricula");
 			st = conn.createStatement();
-			String sql = "SELECT Matricula,numBastidor,color,numAsientos,precio,numSerie,carga,tipoMercancia FROM vehiculos v, camiones c WHERE Matricula='"+matricula+"";
+			String sql = "SELECT Matricula,numBastidor,color,numAsientos,precio,numserie,carga,tipoMercancia FROM Vehiculos v INNER JOIN camiones c WHERE Matricula='"+matricula+"'";
 			rs = st.executeQuery(sql);
 			while (rs.next()) {		
 		%>
 		<table border="1" width="50%">
 			<tr>
 				<td width="100%">
-					<form method="POST" action="deleteCamion.jsp">
+					<form method="POST" action="update.jsp">
+					<input type="hidden" name="id" value="<%=request.getParameter("matricula")%>">
 					<h2 align="center">UPDATE RECORD</h2>
 						<table border="2"  width="100%" bgColor="lightgreen">
 							<tr>
 								<td width="50%" bgColor="lightgreen"><b>Matricula:</b></td>
-								<%out.print("<td width='50%' bgColor='lightgreen'><input type='text' name='matricula' value="+matricula+" size='50'/> </td>"); %>
+								<td width="50%" bgColor="lightgreen"><input type="text" name="matricula" value="<%=rs.getString("matricula")%>" size="50"/> </td>
 							</tr>
 							<tr>
 								<td width="50%" bgColor="lightgreen"><b>Numero de Bastidor:</b></td>
@@ -63,11 +64,11 @@
 							</tr>
 							<tr>
 								<td width="50%" bgColor="lightgreen"><b>Carga:</b></td>
-								<td width="50%" bgColor="lightgreen"><input type="text" name="carga" value="<%=rs.getString("carga")%>"  size="50"></td>
+								<td width="50%" bgColor="lightgreen"><input type="text" name="precio" value="<%=rs.getString("carga")%>"  size="50"></td>
 							</tr>
 							<tr>
 								<td width="50%" bgColor="lightgreen"><b>Tipo de Mercancia:</b></td>
-								<td width="50%" bgColor="lightgreen"><input type="text" name="tipoMercancia" value="<%=rs.getString("tipoMercancia")%>"  size="15"></td>
+								<td width="50%" bgColor="lightgreen"><input type="text" name="numSerie" value="<%=rs.getString("tipoMercancia")%>"  size="15"></td>
 							</tr>
 						</table>
 						<input type="submit" value="Update" name="submit">
