@@ -48,14 +48,13 @@
 		<tr>
 			<td width="100%">
 				<form method="POST" action="confirmarCompraCamiones.jsp">
-					<input type="hidden" name="matricula"
-						value="<%=request.getParameter("matricula")%>">
+					<input type="hidden" name="matricula" value="<%=request.getParameter("matricula")%>">
 					<h2 align="center">COMPRAR CAMION</h2>
 					<table border="2" width="100%" bgColor="lightgreen">
 						<tr>
 							<td width="50%" bgColor="lightgreen"><b>Matricula:</b></td>
 							<td width="50%" bgColor="lightgreen"><input type="text"
-								name="matricula2" value="<%=rs.getString("matricula")%>"
+								name="Matricula" value="<%=rs.getString("matricula")%>"
 								size="50" /></td>
 						</tr>
 						<tr>
