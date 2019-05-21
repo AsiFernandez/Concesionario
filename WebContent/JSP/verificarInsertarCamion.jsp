@@ -67,18 +67,23 @@
 </nav>
 <!-- Page Content -->
 	<div class="container">
-		<h1>Coches</h1>
+		<h1>Camiones</h1>
 		<%
 		try {
-			 String matricula = request.getParameter("matricula");
-			 String numbast = request.getParameter("numbast");
-			 String color = request.getParameter("color");
-		     String numAsientos = request.getParameter("numAsientos");
-		     String precio = request.getParameter("precio");
-		     String numSerie = request.getParameter("numSerie");
-		     String carga = request.getParameter("carga");
-		     String mercancia = request.getParameter("mercancia");
-			 int i=st.executeUpdate("insert into personas(Nombre,Apellido,Edad)values('"+matricula+"','"+numbast+"','"+color+"','"+numAsientos+"','"+precio+"','"+numSerie+"','"+carga+"','"+mercancia+"')");
+			String numSerie = request.getParameter("numSerie");
+			String marca = request.getParameter("marca");
+		    String modelo = request.getParameter("modelo");
+		    String añoFab = request.getParameter("añoFab");
+			String matricula = request.getParameter("matricula");
+			String numbast = request.getParameter("numbast");
+			String color = request.getParameter("color");
+		    String numAsientos = request.getParameter("numAsientos");
+		    String precio = request.getParameter("precio");
+		    String carga = request.getParameter("carga");
+		    String mercancia = request.getParameter("mercancia");
+			st.executeUpdate("insert into serie(NumSerie,marca,modelo,año_fab)values('"+numSerie+"','"+marca+"','"+modelo+"','"+añoFab+"')");
+			st.executeUpdate("insert into vehiculos(Matricula,numBastidor,color,numAsientos,precio,numSerie)values('"+matricula+"','"+numbast+"','"+color+"','"+numAsientos+"','"+precio+"','"+numSerie+"')");
+			st.executeUpdate("insert into camion(Matricula,carga,tipoMercancia)values('"+matricula+"','"+carga+"','"+mercancia+"')");
 		%>
 		<font size="" color="green">
 		<%
@@ -97,7 +102,7 @@
 		}
 		%>
 		<form method="post" action="index.jsp">
-			<input type="button" value="Volver" onclick="location.href='index.jsp'">
+			<input type="button" value="Volver" onclick="location.href='../index.html'">
 		</form>
     </div>
     <!-- /.container -->
