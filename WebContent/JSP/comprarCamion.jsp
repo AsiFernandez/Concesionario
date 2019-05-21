@@ -35,28 +35,36 @@ while (rs.next()) {
 				<table border="2"  width="100%" bgColor="lightgreen">
 
 					<tr>
-					<td width="50%" bgColor="lightgreen"><b>Name:</b></td>
+					<td width="50%" bgColor="lightgreen"><b>Matricula:</b></td>
 					<td width="50%" bgColor="lightgreen"><input type="text" name="matricula" value="<%=rs.getString("matricula")%>" size="50"/> </td>
 					</tr>
 					<tr>
-					<td width="50%" bgColor="lightgreen"><b>City:</b></td>
+					<td width="50%" bgColor="lightgreen"><b>Numero de Bastidor:</b></td>
 					<td width="50%" bgColor="lightgreen"><input type="text" name="numBastidor" value="<%=rs.getString("numBastidor")%>"  size="50"></td>
 					</tr>
 					<tr>
-					<td width="50%" bgColor="lightgreen"><b>Telephone:</b></td>
+					<td width="50%" bgColor="lightgreen"><b>Color:</b></td>
 					<td width="50%" bgColor="lightgreen"><input type="text" name="color" value="<%=rs.getString("color")%>"  size="15"></td>
 					</tr>
 					<tr>
-					<td width="50%" bgColor="lightgreen"><b>Name:</b></td>
+					<td width="50%" bgColor="lightgreen"><b>Numero de Asientos:</b></td>
 					<td width="50%" bgColor="lightgreen"><input type="text" name="numAsientos" value="<%=rs.getString("numAsientos")%>" size="50"/> </td>
 					</tr>
 					<tr>
-					<td width="50%" bgColor="lightgreen"><b>City:</b></td>
+					<td width="50%" bgColor="lightgreen"><b>Precio:</b></td>
 					<td width="50%" bgColor="lightgreen"><input type="text" name="precio" value="<%=rs.getString("precio")%>"  size="50"></td>
 					</tr>
 					<tr>
-					<td width="50%" bgColor="lightgreen"><b>Telephone:</b></td>
+					<td width="50%" bgColor="lightgreen"><b>Numero de serie:</b></td>
 					<td width="50%" bgColor="lightgreen"><input type="text" name="numSerie" value="<%=rs.getString("numSerie")%>"  size="15"></td>
+					</tr>
+					<tr>
+					<td width="50%" bgColor="lightgreen"><b>Carga:</b></td>
+					<td width="50%" bgColor="lightgreen"><input type="text" name="precio" value="<%=rs.getString("carga")%>"  size="50"></td>
+					</tr>
+					<tr>
+					<td width="50%" bgColor="lightgreen"><b>Tipo de Mercancia:</b></td>
+					<td width="50%" bgColor="lightgreen"><input type="text" name="numSerie" value="<%=rs.getString("tipoMercancia")%>"  size="15"></td>
 					</tr>
 				</table>
 <p><input type="submit" value="Update" name="submit">
