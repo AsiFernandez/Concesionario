@@ -55,7 +55,7 @@
 						<tr>
 							<td width="50%" bgColor="lightgreen"><b>Matricula:</b></td>
 							<td width="50%" bgColor="lightgreen"><input type="text"
-								name="matricula" value="<%=rs.getString("matricula")%>"
+								name="matricula2" value="<%=rs.getString("matricula")%>"
 								size="50" /></td>
 						</tr>
 						<tr>
