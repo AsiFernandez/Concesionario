@@ -75,6 +75,7 @@
 				<th>Carga</th>
 				<th>Tipo de mercancia</th>
 				<th>Comprar Camion</th>
+				<th>Editar Camion</th>
 			</tr>
 			<%
 				try {
@@ -93,9 +94,12 @@
 				<td><%=rs.getInt("numSerie")%></td>
 				<td><%=rs.getInt("carga")%></td>
 				<td><%=rs.getString("tipoMercancia")%></td>
-				<td><a
+				<td><a style="font-size: 15px;"
 					href="comprarCamiones.jsp?Matricula=<%=rs.getString("Matricula")%>"
-					class="btn btn-primary btn-lg">Comprar Camion</a></td>
+					class="btn btn-primary btn-lg">Comprar</a></td>
+				<td><a style="font-size: 15px;"
+					href="editarCamiones.jsp?Matricula=<%=rs.getString("Matricula")%>"
+					class="btn btn-primary btn-lg">Editar</a></td>
 			</tr>
 			<%
 				}

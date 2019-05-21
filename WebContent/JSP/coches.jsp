@@ -1,21 +1,20 @@
 <%@ page import="java.util.*"%>
 <%@ page import="java.sql.*"%>
-<%@ page import="javax.servlet.http.*,javax.servlet.*"%>
 <%@ page language="java" contentType="text/html"%>
 <%
-		String user = "ConexConcesionario";
-		String contra = "zubiri";
-		String url ="jdbc:mysql://10.18.124.58:3306/";
-		String database = "concesionario";
-		String driverDB = "com.mysql.jdbc.Driver";
-		try {
-			Class.forName(driverDB);
-		} catch(Exception ex){
-		
-		}
-		Connection conn = null;
-		Statement st = null;
-		ResultSet rs = null;
+	String user = "ConexConcesionario";
+	String contra = "zubiri";
+	String url = "jdbc:mysql://10.18.124.58:3306/";
+	String database = "concesionario";
+	String driverDB = "com.mysql.jdbc.Driver";
+	try {
+		Class.forName(driverDB);
+	} catch (Exception ex) {
+
+	}
+	Connection conn = null;
+	Statement st = null;
+	ResultSet rs = null;
 %>
 <!DOCTYPE html>
 <html lang="es">
@@ -63,7 +62,7 @@
 	<div class="container">
 		<br>
 		<h1>Coches</h1>
-		<a href="insertCoches.jsp" class="btn btn-primary btn-lg"
+		<a href="insertCoche.jsp" class="btn btn-primary btn-lg"
 			id="insertar">Insertar coche nuevo</a>
 		<table>
 			<tr>
@@ -76,15 +75,16 @@
 				<th>Numero de Puertas</th>
 				<th>Capacidad del Maletero</th>
 				<th>Comprar Coche</th>
+				<th>Editar Coche</th>
 			</tr>
 			<%
-		try{
-		conn = DriverManager.getConnection(url+database, user, contra);
-		st = conn.createStatement();
-		String sql = "select * from vehiculos v, coche c where v.Matricula = c.Matricula";
-		rs = st.executeQuery(sql);
-		while(rs.next()){
-		%>
+				try {
+					conn = DriverManager.getConnection(url + database, user, contra);
+					st = conn.createStatement();
+					String sql = "select * from vehiculos v, coche c where v.Matricula = c.Matricula";
+					rs = st.executeQuery(sql);
+					while (rs.next()) {
+			%>
 			<tr>
 				<td><%=rs.getString("Matricula")%></td>
 				<td><%=rs.getInt("numBastidor")%></td>
@@ -94,15 +94,19 @@
 				<td><%=rs.getInt("numSerie")%></td>
 				<td><%=rs.getString("numPuertas")%></td>
 				<td><%=rs.getInt("capacidadMaletero")%></td>
-				<td><a
-					href="delete.jsp?Matricula=<%=rs.getString("Matricula") %>"
-					class="btn btn-primary btn-lg">Comprar coche</a></td>
+				<td><a style="font-size: 15px;"
+					href="comprarCoches.jsp?Matricula=<%=rs.getString("Matricula") %>"
+					class="btn btn-primary btn-lg">Comprar</a></td>
+				<td><a style="font-size: 15px;"
+					href="editarCoches.jsp?Matricula=<%=rs.getString("Matricula")%>"
+					class="btn btn-primary btn-lg">Editar</a></td>
 			</tr>
-			<%}
-		}catch(Exception e){
-			System.out.println(e.getMessage());
-		}
-		%>
+			<%
+				}
+				} catch (Exception e) {
+					System.out.println(e.getMessage());
+				}
+			%>
 		</table>
 	</div>
 	<!-- /.container -->
