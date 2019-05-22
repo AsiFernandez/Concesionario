@@ -40,15 +40,15 @@
 		try {
 			conn = DriverManager.getConnection(url + db, "ConexConcesionario", "zubiri");
 			st = conn.createStatement();
-			String Query = "DELETE FROM vehiculos WHERE Matricula ='"+stringMatricula+ "'";
+			String Query = "DELETE FROM vehiculos WHERE Matricula ='" + stringMatricula + "'";
 			st.executeUpdate(Query);
-			out.println("<p> Camion vendido Correctamente </p>");
+			out.println("<p> Coche vendido correctamente. </p>");
 			out.println("<br>");
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
 	%>
-	<a style="font-size: 15px;" href="camiones.jsp"
+	<a style="font-size: 15px;" href="coches.jsp"
 		class="btn btn-primary btn-lg">Volver</a>
 </body>
 </html>
