@@ -93,7 +93,7 @@
 			System.out.println(ex.getMessage());
 		%>
 		<font color="red"> <%
-			out.println("No se puede añadir correctamente al camion, pruebe de nuevo.");
+			out.println("No se puede añadir correctamente al coche, pruebe de nuevo.");
 		%>
 		</font>
 		<%
