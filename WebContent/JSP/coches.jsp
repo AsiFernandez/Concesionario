@@ -76,7 +76,7 @@
 				<th>Numero de Puertas</th>
 				<th>Capacidad del Maletero</th>
 				<th>Editar Coche</th>
-				<th>Comprar Coche</th>
+				<th>Comprar Coche</th>   
 			</tr>
 			<%
 				try {
