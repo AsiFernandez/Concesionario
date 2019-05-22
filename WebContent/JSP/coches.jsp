@@ -49,10 +49,9 @@
 		<div class="collapse navbar-collapse" id="navbarColor01">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active"><a class="nav-link"
-					href="../index.html">Inicio</a>
-				</li>
-				<li class="nav-item"><a class="nav-link" href="coches.jsp">Coches<span class="sr-only">(current)</span></a>
-				</li>
+					href="../index.html">Inicio</a></li>
+				<li class="nav-item"><a class="nav-link" href="coches.jsp">Coches<span
+						class="sr-only">(current)</span></a></li>
 				<li class="nav-item"><a class="nav-link" href="camiones.jsp">Camiones</a>
 				</li>
 				<li class="nav-item"><a class="nav-link" href="series.jsp">Series</a>
@@ -97,11 +96,11 @@
 				<td><%=rs.getString("numPuertas")%></td>
 				<td><%=rs.getInt("capacidadMaletero")%></td>
 				<td><a style="font-size: 15px;"
-					href="comprarCoches.jsp?Matricula=<%=rs.getString("Matricula") %>"
-					class="btn btn-primary btn-lg">Comprar</a></td>
-				<td><a style="font-size: 15px;"
 					href="editarCoches.jsp?Matricula=<%=rs.getString("Matricula")%>"
 					class="btn btn-primary btn-lg">Editar</a></td>
+				<td><a style="font-size: 15px;"
+					href="comprarCoches.jsp?Matricula=<%=rs.getString("Matricula") %>"
+					class="btn btn-primary btn-lg">Comprar</a></td>
 			</tr>
 			<%
 				}
