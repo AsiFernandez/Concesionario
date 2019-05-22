@@ -89,10 +89,10 @@
 				<td><%=rs.getString("modelo")%></td>
 				<td><%=rs.getDate("año_fab")%></td>
 				<td><a style="font-size: 15px;"
-					href="editarSeries.jsp?Matricula=<%=rs.getString("NumSerie") %>"
+					href="editarSeries.jsp?numSerie=<%=rs.getString("NumSerie") %>"
 					class="btn btn-primary btn-lg">Editar</a></td>
 				<td><a style="font-size: 15px;"
-					href="eliminarSeries.jsp?Matricula=<%=rs.getString("NumSerie")%>"
+					href="eliminarSeries.jsp?numSerie=<%=rs.getString("NumSerie")%>"
 					class="btn btn-primary btn-lg">Eliminar</a></td>
 			</tr>
 			<%
