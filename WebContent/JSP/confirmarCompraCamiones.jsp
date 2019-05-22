@@ -21,40 +21,37 @@
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-<% 
-String strId =request.getParameter("id");
-int id = Integer.parseInt(strId);
-Connection con = null;
-String url = "jdbc:mysql://10.18.124.58:3306/";
-String db = "users";
-String driver = "com.mysql.jdbc.Driver";
-try{
-Class.forName(driver);
-con = DriverManager.getConnection(url+db,"root","");
-try{
-Statement st = con.createStatement();
-String name=request.getParameter("name");
-int in = st.executeUpdate("DELETE FROM student_info WHERE id='"+id+"'");
-con.close();
-out.println("<p> The record is successfully deleted. </p>");
-out.println("<br>");
-out.println("<a href='list.jsp'> RETURN TO MAIN PAGE </a>");
-}
-catch (SQLException ex){
-System.out.println("SQL statement is not executed!");
-}
-}
-catch (Exception e){
-e.printStackTrace();
-}
-%>
 
 	<%
+		String matricula = request.getParameter("Matricula");
+		Connection con = null;
+		String url = "jdbc:mysql://10.18.124.58:3306/";
+		String db = "concesionario";
+		String driver = "com.mysql.jdbc.Driver";
+		
 		try {
-			int in = st.executeUpdate("DELETE FROM vehiculos WHERE Matricula = '"+matricula+"'");
-			int in2 = st.executeUpdate("DELETE FROM camion WHERE Matricula = '"+matricula+"'");
-		} catch (SQLException e) {
-			e.getMessage();
+			Class.forName(driver);
+			con = DriverManager.getConnection(url + db, "ConexConcesionario", "zubiri");
+			try {
+				Statement st = con.createStatement();
+				String name = request.getParameter("name");
+				String Query=  "DELETE FROM vehiculos v, camion c WHERE v.numBastidor = c.numBastidor and v.numBastidor='" + matricula + "'";
+				st.executeUpdate(Query);
+				con.close();
+				out.println("<p> The record is successfully deleted. </p>");
+				out.println("<br>");
+				out.println("<a href='camiones.jsp'> RETURN TO MAIN PAGE </a>");
+			} catch (SQLException ex) {
+				System.out.println("SQL statement is not executed!");
+			}
+		} catch(SQLException se) {
+			   se.printStackTrace();
+		} finally {
+		   try {
+		      if (con!=null) con.close();
+		   } catch (SQLException se) {
+		      se.printStackTrace();
+		   }
 		}
 	%>
 
