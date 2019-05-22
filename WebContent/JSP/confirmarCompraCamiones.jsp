@@ -1,6 +1,20 @@
 <%@ page import="java.util.*"%>
 <%@ page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html"%>
+<%
+	String stringMatricula = request.getParameter("Matricula");
+	String url = "jdbc:mysql://10.18.124.58:3306/";
+	String db = "concesionario";
+	String driver = "com.mysql.jdbc.Driver";
+	try {
+		Class.forName(driver);
+	} catch (Exception ex) {
+		System.out.print(ex.getMessage());
+	}
+	Connection conn = null;
+	Statement st = null;
+	ResultSet rs = null;
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,37 +37,18 @@
 <body>
 
 	<%
-		String matricula = request.getParameter("Matricula");
-		Connection con = null;
-		String url = "jdbc:mysql://10.18.124.58:3306/";
-		String db = "concesionario";
-		String driver = "com.mysql.jdbc.Driver";
-		
 		try {
-			Class.forName(driver);
-			con = DriverManager.getConnection(url + db, "ConexConcesionario", "zubiri");
-			try {
-				Statement st = con.createStatement();
-				String name = request.getParameter("name");
-				String Query=  "DELETE FROM vehiculos v, camion c WHERE v.numBastidor = c.numBastidor and v.numBastidor='" + matricula + "'";
-				st.executeUpdate(Query);
-				con.close();
-				out.println("<p> The record is successfully deleted. </p>");
-				out.println("<br>");
-				out.println("<a href='camiones.jsp'> RETURN TO MAIN PAGE </a>");
-			} catch (SQLException ex) {
-				System.out.println("SQL statement is not executed!");
-			}
-		} catch(SQLException se) {
-			   se.printStackTrace();
-		} finally {
-		   try {
-		      if (con!=null) con.close();
-		   } catch (SQLException se) {
-		      se.printStackTrace();
-		   }
+			conn = DriverManager.getConnection(url + db, "ConexConcesionario", "zubiri");
+			st = conn.createStatement();
+			String Query = "DELETE FROM vehiculos WHERE Matricula ='"+stringMatricula+ "'";
+			st.executeUpdate(Query);
+			out.println("<p> The record is successfully deleted. </p>");
+			out.println("<br>");
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
 		}
 	%>
-
+	<a style="font-size: 15px;" href="camiones.jsp"
+		class="btn btn-primary btn-lg">Volver</a>
 </body>
 </html>

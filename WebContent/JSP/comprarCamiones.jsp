@@ -46,60 +46,60 @@
 
 	<table border="1" width="50%">
 		<tr>
-			<td width="100%">
-				<form method="POST" action="confirmarCompraCamiones.jsp">
-					<input type="hidden" name="matricula" value="<%=request.getParameter("matricula")%>">
-					<h2 align="center">COMPRAR CAMION</h2>
-					<table border="2" width="100%" bgColor="lightgreen">
-						<tr>
-							<td width="50%" bgColor="lightgreen"><b>Matricula:</b></td>
-							<td width="50%" bgColor="lightgreen"><input type="text"
-								name="Matricula" value="<%=rs.getString("matricula")%>"
-								size="50" /></td>
-						</tr>
-						<tr>
-							<td width="50%" bgColor="lightgreen"><b>Numero de
-									Bastidor:</b></td>
-							<td width="50%" bgColor="lightgreen"><input type="text"
-								name="numBastidor" value="<%=rs.getString("numBastidor")%>"
-								size="50"></td>
-						</tr>
-						<tr>
-							<td width="50%" bgColor="lightgreen"><b>Color:</b></td>
-							<td width="50%" bgColor="lightgreen"><input type="text"
-								name="color" value="<%=rs.getString("color")%>" size="15"></td>
-						</tr>
-						<tr>
-							<td width="50%" bgColor="lightgreen"><b>Numero de
-									Asientos:</b></td>
-							<td width="50%" bgColor="lightgreen"><input type="text"
-								name="numAsientos" value="<%=rs.getString("numAsientos")%>"
-								size="50" /></td>
-						</tr>
-						<tr>
-							<td width="50%" bgColor="lightgreen"><b>Precio:</b></td>
-							<td width="50%" bgColor="lightgreen"><input type="text"
-								name="precio" value="<%=rs.getString("precio")%>" size="50"></td>
-						</tr>
-						<tr>
-							<td width="50%" bgColor="lightgreen"><b>Numero de serie:</b></td>
-							<td width="50%" bgColor="lightgreen"><input type="text"
-								name="numSerie" value="<%=rs.getString("numSerie")%>" size="15"></td>
-						</tr>
-						<tr>
-							<td width="50%" bgColor="lightgreen"><b>Carga:</b></td>
-							<td width="50%" bgColor="lightgreen"><input type="text"
-								name="precio" value="<%=rs.getString("carga")%>" size="50"></td>
-						</tr>
-						<tr>
-							<td width="50%" bgColor="lightgreen"><b>Tipo de
-									Mercancia:</b></td>
-							<td width="50%" bgColor="lightgreen"><input type="text"
-								name="numSerie" value="<%=rs.getString("tipoMercancia")%>"
-								size="15"></td>
-						</tr>
-					</table>
-				</form>
+			<td width="100%"><input type="hidden" name="matricula"
+				value="<%=request.getParameter("matricula")%>">
+				<h2 align="center">COMPRAR CAMION</h2>
+				<table border="2" width="100%" bgColor="lightgreen">
+					<tr>
+						<td width="50%" bgColor="lightgreen"><b>Matricula:</b></td>
+						<td width="50%" bgColor="lightgreen"><input type="text"
+							name="Matricula" value="<%=rs.getString("matricula")%>" size="50" /></td>
+					</tr>
+					<tr>
+						<td width="50%" bgColor="lightgreen"><b>Numero de
+								Bastidor:</b></td>
+						<td width="50%" bgColor="lightgreen"><input type="text"
+							name="numBastidor" value="<%=rs.getString("numBastidor")%>"
+							size="50"></td>
+					</tr>
+					<tr>
+						<td width="50%" bgColor="lightgreen"><b>Color:</b></td>
+						<td width="50%" bgColor="lightgreen"><input type="text"
+							name="color" value="<%=rs.getString("color")%>" size="15"></td>
+					</tr>
+					<tr>
+						<td width="50%" bgColor="lightgreen"><b>Numero de
+								Asientos:</b></td>
+						<td width="50%" bgColor="lightgreen"><input type="text"
+							name="numAsientos" value="<%=rs.getString("numAsientos")%>"
+							size="50" /></td>
+					</tr>
+					<tr>
+						<td width="50%" bgColor="lightgreen"><b>Precio:</b></td>
+						<td width="50%" bgColor="lightgreen"><input type="text"
+							name="precio" value="<%=rs.getString("precio")%>" size="50"></td>
+					</tr>
+					<tr>
+						<td width="50%" bgColor="lightgreen"><b>Numero de serie:</b></td>
+						<td width="50%" bgColor="lightgreen"><input type="text"
+							name="numSerie" value="<%=rs.getString("numSerie")%>" size="15"></td>
+					</tr>
+					<tr>
+						<td width="50%" bgColor="lightgreen"><b>Carga:</b></td>
+						<td width="50%" bgColor="lightgreen"><input type="text"
+							name="precio" value="<%=rs.getString("carga")%>" size="50"></td>
+					</tr>
+					<tr>
+						<td width="50%" bgColor="lightgreen"><b>Tipo de
+								Mercancia:</b></td>
+						<td width="50%" bgColor="lightgreen"><input type="text"
+							name="numSerie" value="<%=rs.getString("tipoMercancia")%>"
+							size="15"></td>
+					</tr>
+				</table>
+				<a style="font-size: 15px;"
+					href="confirmarCompraCamiones.jsp?Matricula=<%=rs.getString("Matricula")%>"
+					class="btn btn-primary btn-lg">Confirmar</a>
 			</td>
 		</tr>
 	</table>
@@ -109,7 +109,6 @@
 			System.out.println(ex.getMessage());
 		}
 	%>
-		<a href="confirmarCompraCamiones.jsp" class="btn btn-primary btn-lg">Confirmar</a>
 </body>
 <footer class="py-5 bg-dark">
 	<div class="container">
