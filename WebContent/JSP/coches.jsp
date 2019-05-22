@@ -75,8 +75,8 @@
 				<th>Numero de serie</th>
 				<th>Numero de Puertas</th>
 				<th>Capacidad del Maletero</th>
-				<th>Comprar Coche</th>
 				<th>Editar Coche</th>
+				<th>Comprar Coche</th>
 			</tr>
 			<%
 				try {

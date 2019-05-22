@@ -76,8 +76,8 @@
 				<th>Numero de serie</th>
 				<th>Carga</th>
 				<th>Tipo de mercancia</th>
+				<th>Editar Coche</th>
 				<th>Comprar Camion</th>
-				<th>Editar Camion</th>
 			</tr>
 			<%
 				try {
