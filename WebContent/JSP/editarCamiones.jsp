@@ -18,7 +18,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Editar Coche</title>
+<title>Editar Camion</title>
 <!-- https://bootswatch.com/materia/ -->
 <meta charset="utf-8">
 <meta name="viewport"
@@ -37,7 +37,7 @@
 	<%
 		try {
 			Statement st = con.createStatement();
-			String query = "SELECT * FROM Vehiculos v, coche c WHERE (v.Matricula = c.Matricula) and v.Matricula='"
+			String query = "SELECT * FROM Vehiculos v, camion c WHERE (v.Matricula = c.Matricula) and v.Matricula='"
 					+ matricula + "'";
 			ResultSet rs = st.executeQuery(query);
 			while (rs.next()) {
@@ -47,10 +47,10 @@
 	<table border="1" width="50%">
 		<tr>
 			<td width="100%">
-				<form method="POST" action="confirmarEditarCoches.jsp">
+				<form method="POST" action="confirmarEditarCamiones.jsp">
 					<input type="hidden" name="matricula"
 						value="<%=request.getParameter("matricula")%>">
-					<h2 align="center">COMPRAR COCHE</h2>
+					<h2 align="center">COMPRAR CAMION</h2>
 					<table border="2" width="100%" bgColor="lightgreen">
 						<tr>
 							<td width="50%" bgColor="lightgreen"><b>Matricula:</b></td>
@@ -90,18 +90,16 @@
 								size="15"></td>
 						</tr>
 						<tr>
-							<td width="50%" bgColor="lightgreen"><b>Numero de
-									puertas:</b></td>
+							<td width="50%" bgColor="lightgreen"><b>Capacidad de carga:</b></td>
 							<td width="50%" bgColor="lightgreen"><input type="text"
 								name="maatricula"
-								value="<%=rs.getString("numPuertas")%>" disabled size="15"></td>
+								value="<%=rs.getString("carga")%>" disabled size="15"></td>
 						</tr>
 						<tr>
-							<td width="50%" bgColor="lightgreen"><b>Capacidad de
-									maletero:</b></td>
+							<td width="50%" bgColor="lightgreen"><b>Tipo de mercancia:</b></td>
 							<td width="50%" bgColor="lightgreen"><input type="text"
 								name="maatricula"
-								value="<%=rs.getString("capacidadMaletero")%>" disabled
+								value="<%=rs.getString("tipoMercancia")%>" disabled
 								size="15"></td>
 						</tr>
 					</table>
