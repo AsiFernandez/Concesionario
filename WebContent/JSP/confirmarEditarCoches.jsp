@@ -1,21 +1,7 @@
 <%@ page import="java.util.*"%>
 <%@ page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html"%>
-<%
-	String matrikula = request.getParameter("matricula");
-	String kolor = request.getParameter("color");
-	String url = "jdbc:mysql://10.18.124.58:3306/";
-	String db = "concesionario";
-	String driver = "com.mysql.jdbc.Driver";
-	try {
-		Class.forName(driver);
-	} catch (Exception ex) {
-		System.out.print(ex.getMessage());
-	}
-	Connection conn = null;
-	Statement st = null;
-	ResultSet rs = null;
-%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,17 +24,34 @@
 <body>
 
 	<%
+		out.println("<style>  p {font-family: arial;" + " color: red; font-size: 16;   }; " + "</style>");
+		out.println("<style>  a,b {font-family: arial;" + " color: blue; font-size: 16;   }; " + "</style>");
+	%>
+	<%
+		
+		Connection con = null;
+		String url = "jdbc:mysql://10.18.124.58:3306/";
+		String db = "concesionario";
+		String driver = "com.mysql.jdbc.Driver";
+		String matricula2 = request.getParameter("maatricula");
+		String color2 = request.getParameter("color");
 		try {
-			conn = DriverManager.getConnection(url + db, "ConexConcesionario", "zubiri");
-			st = conn.createStatement();
-			String Query = "UPDATE vehiculos SET color ='" + kolor + "' where Matricula ='"+matrikula+"'";
-			st.executeUpdate(Query);
-			out.println("<p> Coche editado correctamente. </p>");
-			out.println("<br>");
+			Class.forName(driver);
+			con = DriverManager.getConnection(url + db, "ConexConcesionario", "zubiri");
+			try {
+				Statement st = con.createStatement();
+				st.executeUpdate("UPDATE vehiculos SET color='" + color2 + "' WHERE Matricula='" + matricula2 + "'");
+				out.println("<p> The record of " + "<b>" + color2 + "</b>" + " is successfully updated. </p>");
+				out.println("<br>");
+			} catch (SQLException ex) {
+				System.out.print(ex.getMessage());
+			}
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			e.getMessage();
+			
 		}
 	%>
+
 	<a style="font-size: 15px;" href="coches.jsp"
 		class="btn btn-primary btn-lg">Volver</a>
 </body>

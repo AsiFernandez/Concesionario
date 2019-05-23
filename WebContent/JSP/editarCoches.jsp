@@ -54,7 +54,8 @@
 					<table border="2" width="100%" bgColor="lightgreen">
 						<tr>
 							<td width="50%" bgColor="lightgreen"><b>Matricula:</b></td>
-							<td width="50%" bgColor="lightgreen"><%=rs.getString("matricula")%></td>
+						<td width="50%" bgColor="lightgreen"><input type="text"
+								name="maatricula" value="<%=rs.getString("matricula")%>" size="15"></td>
 						</tr>
 						<tr>
 							<td width="50%" bgColor="lightgreen"><b>Numero de
@@ -90,11 +91,9 @@
 						</tr>
 					</table>
 					<p>
-					<a style="font-size: 15px;"
-					href="confirmarEditarCoches.jsp?Matricula=<%=rs.getString("Matricula")%>"
-					class="btn btn-primary btn-lg">Confirmar</a>
-						<input type="submit" value="update" name="submit"> <input
-							type="reset" value="Reset" name="reset">
+					
+						<input type="submit" value="Confirmar" name="confirmar" class="btn btn-primary btn-lg" >
+						<input type="reset" value="Reset" name="reset">
 					</p>
 				</form>
 			</td>

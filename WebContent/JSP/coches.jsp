@@ -92,7 +92,7 @@
 				<td><%=rs.getString("color")%></td>
 				<td><%=rs.getInt("numAsientos")%></td>
 				<td><%=rs.getFloat("precio")%></td>
-				<td><%=rs.getInt("numSerie")%></td>
+				<td><%=rs.getInt("NumSerie")%></td>
 				<td><%=rs.getString("numPuertas")%></td>
 				<td><%=rs.getInt("capacidadMaletero")%></td>
 				<td><a style="font-size: 15px;"
