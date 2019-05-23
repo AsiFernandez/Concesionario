@@ -47,20 +47,23 @@
 	<table border="1" width="50%">
 		<tr>
 			<td width="100%">
-				<form method="get" action="confirmarEditarCoches.jsp">
+				<form method="POST" action="confirmarEditarCoches.jsp">
 					<input type="hidden" name="matricula"
 						value="<%=request.getParameter("matricula")%>">
 					<h2 align="center">COMPRAR COCHE</h2>
 					<table border="2" width="100%" bgColor="lightgreen">
 						<tr>
 							<td width="50%" bgColor="lightgreen"><b>Matricula:</b></td>
-						<td width="50%" bgColor="lightgreen"><input type="text"
-								name="maatricula" value="<%=rs.getString("matricula")%>" size="15"></td>
+							<td width="50%" bgColor="lightgreen"><input type="text"
+								name="maatricula"
+								value="<%=rs.getString("matricula")%>" size="15"></td>
 						</tr>
 						<tr>
 							<td width="50%" bgColor="lightgreen"><b>Numero de
 									Bastidor:</b></td>
-							<td width="50%" bgColor="lightgreen"><%=rs.getString("numBastidor")%></td>
+							<td width="50%" bgColor="lightgreen"><input type="text"
+								name="maatricula"
+								value="<%=rs.getString("numBastidor")%>" disabled size="15"></td>
 						</tr>
 						<tr>
 							<td width="50%" bgColor="lightgreen"><b>Color:</b></td>
@@ -70,30 +73,43 @@
 						<tr>
 							<td width="50%" bgColor="lightgreen"><b>Numero de
 									Asientos:</b></td>
-							<td width="50%" bgColor="lightgreen"><%=rs.getString("numAsientos")%></td>
+							<td width="50%" bgColor="lightgreen"><input type="text"
+								name="maatricula"
+								value="<%=rs.getString("numAsientos")%>" disabled size="15"></td>
 						</tr>
 						<tr>
 							<td width="50%" bgColor="lightgreen"><b>Precio:</b></td>
-							<td width="50%" bgColor="lightgreen"><%=rs.getString("precio")%></td>
+							<td width="50%" bgColor="lightgreen"><input type="text"
+								name="maatricula" value="<%=rs.getString("precio")%>" disabled
+								size="15"></td>
 						</tr>
 						<tr>
 							<td width="50%" bgColor="lightgreen"><b>Numero de serie:</b></td>
-							<td width="50%" bgColor="lightgreen"><%=rs.getString("numSerie")%></td>
+							<td width="50%" bgColor="lightgreen"><input type="text"
+								name="maatricula" value="<%=rs.getString("numSerie")%>" disabled
+								size="15"></td>
 						</tr>
 						<tr>
-							<td width="50%" bgColor="lightgreen"><b>Carga:</b></td>
-							<td width="50%" bgColor="lightgreen"><%=rs.getString("numPuertas")%></td>
+							<td width="50%" bgColor="lightgreen"><b>Numero de
+									puertas:</b></td>
+							<td width="50%" bgColor="lightgreen"><input type="text"
+								name="maatricula"
+								value="<%=rs.getString("numPuertas")%>" disabled size="15"></td>
 						</tr>
 						<tr>
-							<td width="50%" bgColor="lightgreen"><b>Tipo de
-									Mercancia:</b></td>
-							<td width="50%" bgColor="lightgreen"><%=rs.getString("capacidadMaletero")%></td>
+							<td width="50%" bgColor="lightgreen"><b>Capacidad de
+									maletero:</b></td>
+							<td width="50%" bgColor="lightgreen"><input type="text"
+								name="maatricula"
+								value="<%=rs.getString("capacidadMaletero")%>" disabled
+								size="15"></td>
 						</tr>
 					</table>
 					<p>
-					
-						<input type="submit" value="Confirmar" name="confirmar" class="btn btn-primary btn-lg" >
-						<input type="reset" value="Reset" name="reset">
+
+						<input type="submit" value="Confirmar" name="confirmar"
+							class="btn btn-primary btn-lg"> 
+						<input type="reset"	value="Reset" name="reset" class="btn btn-primary btn-lg">
 					</p>
 				</form>
 			</td>

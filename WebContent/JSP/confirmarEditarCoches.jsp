@@ -1,7 +1,23 @@
 <%@ page import="java.util.*"%>
 <%@ page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html"%>
-
+<%
+	String user = "ConexConcesionario";
+	String contra = "zubiri";
+	String url = "jdbc:mysql://10.18.124.58:3306/";
+	String db = "concesionario";
+	String driver = "com.mysql.jdbc.Driver";
+	Connection conn = null;
+	Statement st = null;
+	ResultSet rs = null;
+	try {
+		Class.forName(driver);
+		conn = DriverManager.getConnection(url + db, user, contra);
+		st = conn.createStatement();
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,37 +38,26 @@
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-
 	<%
-		out.println("<style>  p {font-family: arial;" + " color: red; font-size: 16;   }; " + "</style>");
-		out.println("<style>  a,b {font-family: arial;" + " color: blue; font-size: 16;   }; " + "</style>");
+	try { 
+	String matricula2 = request.getParameter("maatricula"); 
+	String kolor = request.getParameter("color"); 
+	st.executeUpdate("UPDATE vehiculos SET color='" + kolor + "' WHERE Matricula='" + matricula2 +	"'"); 
 	%>
+	<font size="" color="green"> <%out.println("Se ha cambiado el color del coche con matricula "+matricula2+" al color "+kolor+" correctamente");%>
+	</font>
 	<%
-		
-		Connection con = null;
-		String url = "jdbc:mysql://10.18.124.58:3306/";
-		String db = "concesionario";
-		String driver = "com.mysql.jdbc.Driver";
-		String matricula2 = request.getParameter("maatricula");
-		String color2 = request.getParameter("color");
-		try {
-			Class.forName(driver);
-			con = DriverManager.getConnection(url + db, "ConexConcesionario", "zubiri");
-			try {
-				Statement st = con.createStatement();
-				st.executeUpdate("UPDATE vehiculos SET color='" + color2 + "' WHERE Matricula='" + matricula2 + "'");
-				out.println("<p> The record of " + "<b>" + color2 + "</b>" + " is successfully updated. </p>");
-				out.println("<br>");
-			} catch (SQLException ex) {
-				System.out.print(ex.getMessage());
-			}
-		} catch (Exception e) {
-			e.getMessage();
-			
-		}
+	} catch(Exception ex){
 	%>
-
+	<font color="red"> <%
+		out.println("No se puede modificar correctamente el color del coche, pruebe de nuevo.");
+	%>
+	</font>
+	<%
+	}
+	%>
+	<br>
 	<a style="font-size: 15px;" href="coches.jsp"
-		class="btn btn-primary btn-lg">Volver</a>
+		class="btn btn-primary btn-lg">Volver a la tabla coches</a>
 </body>
 </html>
