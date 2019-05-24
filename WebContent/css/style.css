@@ -18,6 +18,9 @@ img {
 	width: 500px;
 	height: 250px;
 }
-#insertar {
-	
+#PieDePagina {
+	position: bottom;
+	background-color: black;
+	color: white;
+	width: 100%
 }

@@ -96,15 +96,15 @@
    			<%} %> 
 			</select>
 			
-			<%
+			
+			<br> <br> <input type="submit" value="Insertar Datos" class="btn btn-primary btn-lg"> <br> <br>
+		</form>
+	</div>
+	<%
 				} catch (Exception e) {
 					System.out.println(e.getMessage());
 				}
 			%>
-			<br> <br> <input type="submit" value="Insertar Datos"> <br> <br>
-		</form>
-	</div>
-	
 	
 	<!-- /.container -->
 	<!-- Footer -->

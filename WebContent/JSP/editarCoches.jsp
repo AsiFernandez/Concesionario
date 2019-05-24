@@ -54,7 +54,7 @@
 						<tr>
 							<td><b>Matricula:</b></td>
 							<td><input type="text" name="maatricula"
-								value="<%=rs.getString("matricula")%>" size="15"></td>
+								value="<%=rs.getString("matricula")%>" size="15" readonly></td>
 						</tr>
 						<tr>
 							<td><b>Numero de Bastidor:</b></td>

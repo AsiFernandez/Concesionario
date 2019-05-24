@@ -34,7 +34,7 @@
 <!-- Custom styles for this template -->
 <link href="../css/heroic-features.css" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../css/style.css">.
 </head>
 <body>
 	<!-- Navigation -->
@@ -110,17 +110,7 @@
 			%>
 		</table>
 	</div>
-	<!-- /.container -->
-	<!-- Footer -->
-	<footer class="py-5 bg-dark">
-		<div class="container">
-			<p class="m-0 text-center text-white">Copyright &copy; AJA 2019</p>
-		</div>
-		<!-- /.container -->
-	</footer>
+<footer id="PieDePagina"> AJA  ©</footer>
 
-	<!-- Bootstrap core JavaScript -->
-	<script src="vendor/jquery/jquery.min.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
