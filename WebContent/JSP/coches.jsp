@@ -88,13 +88,13 @@
 			%>
 			<tr>
 				<td><%=rs.getString("Matricula")%></td>
-				<td><%=rs.getInt("numBastidor")%></td>
+				<td><%=rs.getString("numBastidor")%></td>
 				<td><%=rs.getString("color")%></td>
-				<td><%=rs.getInt("numAsientos")%></td>
-				<td><%=rs.getFloat("precio")%></td>
-				<td><%=rs.getInt("NumSerie")%></td>
+				<td><%=rs.getString("numAsientos")%></td>
+				<td><%=rs.getString("precio")%></td>
+				<td><%=rs.getString("NumSerie")%></td>
 				<td><%=rs.getString("numPuertas")%></td>
-				<td><%=rs.getInt("capacidadMaletero")%></td>
+				<td><%=rs.getString("capacidadMaletero")%></td>
 				<td><a style="font-size: 15px;"
 					href="editarCoches.jsp?Matricula=<%=rs.getString("Matricula")%>"
 					class="btn btn-primary btn-lg">Editar</a></td>

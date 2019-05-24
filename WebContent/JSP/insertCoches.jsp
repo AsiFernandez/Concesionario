@@ -1,6 +1,19 @@
 <%@ page import="java.util.*"%>
 <%@ page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html"%>
+<%
+	String matricula = request.getParameter("Matricula");
+	Connection conn = null;
+	String url = "jdbc:mysql://10.18.124.58:3306/";
+	String db = "concesionario";
+	String driver = "com.mysql.jdbc.Driver";
+	try {
+		Class.forName(driver);
+		conn = DriverManager.getConnection(url + db, "ConexConcesionario", "zubiri");
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+%> 
 <!DOCTYPE html>
 <html lang="es">
 
@@ -46,6 +59,16 @@
 		</div>
 	</nav>
 	<!-- Page Content -->
+	
+	<%
+				try {
+					Statement st = conn.createStatement();
+					String sql = "select numSerie from serie ";
+					ResultSet rs = st.executeQuery(sql);
+					
+	%>
+	
+	
 	<div class="container">
 		<h1>Coches</h1>
 		<form method="post" action="verificarInsertarCoche.jsp">
@@ -65,10 +88,24 @@
 			<p>Capacidad del maletero:</p>
 			<input name="maletero"> 
 			<p>Numero de serie:</p>
-			<input name="numSerie">
+			<select name="numSerie" style="width: 170px">
+			<%
+			while (rs.next()) {
+			%>
+   			<option value="<%=rs.getString("numSerie")%>"><%=rs.getString("numSerie")%></option>
+   			<%} %> 
+			</select>
+			
+			<%
+				} catch (Exception e) {
+					System.out.println(e.getMessage());
+				}
+			%>
 			<br> <br> <input type="submit" value="Insertar Datos"> <br> <br>
 		</form>
 	</div>
+	
+	
 	<!-- /.container -->
 	<!-- Footer -->
 	<footer class="py-5 bg-dark">
