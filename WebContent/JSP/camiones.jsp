@@ -25,7 +25,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title>AJA</title>
+<title>AJA camiones</title>
 <link href="/media/open-iconic/font/css/open-iconic-bootstrap.css"
 	rel="stylesheet">
 <!-- Bootstrap core CSS -->
@@ -71,13 +71,13 @@
 				<th>Matricula</th>
 				<th>Numero de Bastidor</th>
 				<th>Color</th>
-				<th>numero de Asientos</th>
+				<th>Numero de Asientos</th>
 				<th>Precio</th>
 				<th>Numero de serie</th>
 				<th>Carga</th>
 				<th>Tipo de mercancia</th>
-				<th>Editar Coche</th>
-				<th>Comprar Camion</th>
+				<th>Editar camion</th>
+				<th>Comprar camion</th>
 			</tr>
 			<%
 				try {

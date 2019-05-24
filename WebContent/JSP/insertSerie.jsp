@@ -10,7 +10,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title>AJA</title>
+<title>Insertar serie</title>
 <link href="/media/open-iconic/font/css/open-iconic-bootstrap.css"
 	rel="stylesheet">
 <!-- Bootstrap core CSS -->
@@ -47,7 +47,7 @@
 	</nav>
 	<!-- Page Content -->
 	<div class="container">
-		<h1>Series</h1>
+		<h1>Insertar serie</h1>
 		<form method="post" action="verificarInsertarSerie.jsp">
 			<h4>Serie</h4>
 			<p>Numero de serie:</p>

@@ -17,7 +17,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
 <title>Editar Coche</title>
 <!-- https://bootswatch.com/materia/ -->
 <meta charset="utf-8">
@@ -50,7 +49,7 @@
 				<form method="POST" action="confirmarEditarCoches.jsp">
 					<input type="hidden" name="matricula"
 						value="<%=request.getParameter("matricula")%>">
-					<h2 align="center">EDITAR COCHE</h2>
+					<h2 align="center">Editar coche</h2>
 					<table>
 						<tr>
 							<td><b>Matricula:</b></td>

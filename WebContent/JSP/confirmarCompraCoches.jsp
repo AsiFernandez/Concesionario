@@ -18,8 +18,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Confirmacion Compra</title>
+<title>Compra coche</title>
 <!-- https://bootswatch.com/materia/ -->
 <meta charset="utf-8">
 <meta name="viewport"
@@ -35,7 +34,7 @@
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-
+<h1>Comprar coche</h1>
 	<%
 		try {
 			conn = DriverManager.getConnection(url + db, "ConexConcesionario", "zubiri");
@@ -49,6 +48,6 @@
 		}
 	%>
 	<a style="font-size: 15px;" href="coches.jsp"
-		class="btn btn-primary btn-lg">Volver</a>
+		class="btn btn-primary btn-lg">Volver a la tabla coches</a>
 </body>
 </html>

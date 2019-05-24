@@ -17,7 +17,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
 <title>Comprar Camion</title>
 <!-- https://bootswatch.com/materia/ -->
 <meta charset="utf-8">

@@ -21,8 +21,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Confirmacion editar</title>
+<title>Editar coche</title>
 <!-- https://bootswatch.com/materia/ -->
 <meta charset="utf-8">
 <meta name="viewport"

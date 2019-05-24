@@ -33,7 +33,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title>AJA</title>
+<title>Insertar camion</title>
 <link href="/media/open-iconic/font/css/open-iconic-bootstrap.css"
 	rel="stylesheet">
 <!-- Bootstrap core CSS -->
@@ -70,7 +70,7 @@
 	</nav>
 	<!-- Page Content -->
 	<div class="container">
-		<h1>Camiones</h1>
+		<h1>Insertar camion</h1>
 		<%
 		try {
 			String numSerie = request.getParameter("numSerie");
@@ -99,7 +99,7 @@
 		}
 		%>
 		<form method="post" action="index.jsp">
-			<input type="button" value="Volver"
+			<input type="button" value="Volver a la tabla camiones"
 				onclick="location.href='camiones.jsp'">
 		</form>
 	</div>

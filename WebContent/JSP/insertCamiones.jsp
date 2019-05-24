@@ -10,7 +10,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title>AJA</title>
+<title>Insertar camion</title>
 <link href="/media/open-iconic/font/css/open-iconic-bootstrap.css"
 	rel="stylesheet">
 <!-- Bootstrap core CSS -->
@@ -47,7 +47,7 @@
 	</nav>
 	<!-- Page Content -->
 	<div class="container">
-		<h1>Camiones</h1>
+		<h1>Insertar camion</h1>
 		<form method="post" action="verificarInsertarCamion.jsp">
 			<h4>Datos a insertar</h4>
 			<p>Matricula:</p>

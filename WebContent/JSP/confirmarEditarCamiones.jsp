@@ -21,8 +21,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Confirmacion editar</title>
+<title>Editar camion</title>
 <!-- https://bootswatch.com/materia/ -->
 <meta charset="utf-8">
 <meta name="viewport"
@@ -38,6 +37,7 @@
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
+<h1>Editar camion</h1>
 	<%
 	try { 
 	String matricula2 = request.getParameter("maatricula"); 

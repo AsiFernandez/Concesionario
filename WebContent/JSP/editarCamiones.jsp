@@ -17,7 +17,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
 <title>Editar Camion</title>
 <!-- https://bootswatch.com/materia/ -->
 <meta charset="utf-8">
@@ -50,7 +49,7 @@
 				<form method="POST" action="confirmarEditarCamiones.jsp">
 					<input type="hidden" name="matricula"
 						value="<%=request.getParameter("matricula")%>">
-					<h2 align="center">COMPRAR CAMION</h2>
+					<h2 align="center">Comprar camion</h2>
 					<table border="2" width="100%" bgColor="lightgreen">
 						<tr>
 							<td width="50%" bgColor="lightgreen"><b>Matricula:</b></td>

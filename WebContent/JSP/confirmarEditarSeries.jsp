@@ -25,8 +25,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Confirmacion editar</title>
+<title>Editar serie</title>
 <!-- https://bootswatch.com/materia/ -->
 <meta charset="utf-8">
 <meta name="viewport"
@@ -42,6 +41,7 @@
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
+<h1>Editar serie</h1>
 	<%
 		try {
 			st.executeUpdate("UPDATE serie SET marca='" + marca + "', modelo='" + modelo + "',año_fab='" + año_fab

@@ -17,8 +17,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Comprar Camion</title>
+<title>Comprar coche</title>
 <!-- https://bootswatch.com/materia/ -->
 <meta charset="utf-8">
 <meta name="viewport"
@@ -48,41 +47,41 @@
 		<tr>
 			<td width="100%"><input type="hidden" name="matricula"
 				value="<%=request.getParameter("matricula")%>">
-				<h2 align="center">COMPRAR COCHE </h2>
+				<h2 align="center">Comprar coche</h2>
 				<table border="2" width="100%" bgColor="lightgreen">
 					<tr>
-						<td width="50%" bgColor="lightgreen"><b>Matricula:</b></td>
+						<td width="50%" bgColor="lightgreen"><b>Matricula</b></td>
 						<td width="50%" bgColor="lightgreen"><%=rs.getString("matricula")%></td>
 					</tr>
 					<tr>
 						<td width="50%" bgColor="lightgreen"><b>Numero de
-								Bastidor:</b></td>
+								Bastidor</b></td>
 						<td width="50%" bgColor="lightgreen"><%=rs.getString("numBastidor")%></td>
 					</tr>
 					<tr>
-						<td width="50%" bgColor="lightgreen"><b>Color:</b></td>
+						<td width="50%" bgColor="lightgreen"><b>Color</b></td>
 						<td width="50%" bgColor="lightgreen"><%=rs.getString("color")%></td>
 					</tr>
 					<tr>
 						<td width="50%" bgColor="lightgreen"><b>Numero de
-								Asientos:</b></td>
+								Asientos</b></td>
 						<td width="50%" bgColor="lightgreen"><%=rs.getString("numAsientos")%></td>
 					</tr>
 					<tr>
-						<td width="50%" bgColor="lightgreen"><b>Precio:</b></td>
+						<td width="50%" bgColor="lightgreen"><b>Precio</b></td>
 						<td width="50%" bgColor="lightgreen"><%=rs.getString("precio")%></td>
 					</tr>
 					<tr>
-						<td width="50%" bgColor="lightgreen"><b>Numero de serie:</b></td>
+						<td width="50%" bgColor="lightgreen"><b>Numero de serie</b></td>
 						<td width="50%" bgColor="lightgreen"><%=rs.getString("numSerie")%></td>
 					</tr>
 					<tr>
-						<td width="50%" bgColor="lightgreen"><b>Carga:</b></td>
+						<td width="50%" bgColor="lightgreen"><b>Carga</b></td>
 						<td width="50%" bgColor="lightgreen"><%=rs.getString("numPuertas")%></td>
 					</tr>
 					<tr>
 						<td width="50%" bgColor="lightgreen"><b>Tipo de
-								Mercancia:</b></td>
+								Mercancia</b></td>
 						<td width="50%" bgColor="lightgreen"><%=rs.getString("capacidadMaletero")%></td>
 					</tr>
 				</table>
