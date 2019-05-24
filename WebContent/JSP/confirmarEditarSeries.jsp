@@ -2,8 +2,8 @@
 <%@ page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html"%>
 <%
-	String numSerie = request.getParameter("NumeroSerie"); 
-	String marca = request.getParameter("marca"); 
+	String numSerie = request.getParameter("NumeroSerie");
+	String marca = request.getParameter("marca");
 	String modelo = request.getParameter("modelo");
 	String año_fab = request.getParameter("año_fab");
 	String user = "ConexConcesionario";
@@ -43,20 +43,23 @@
 </head>
 <body>
 	<%
-	try { 
-	st.executeUpdate("UPDATE serie SET marca='" + marca + "', modelo='"+modelo+"',año_fab='"+año_fab+"' WHERE NumSerie='" + numSerie +	"'"); 
+		try {
+			st.executeUpdate("UPDATE serie SET marca='" + marca + "', modelo='" + modelo + "',año_fab='" + año_fab
+					+ "' WHERE NumSerie='" + numSerie + "'");
 	%>
-	<font size="" color="green"> <%out.println("Se han cambiado los valores de la serie "+numSerie+" correctamente");%>
+	<font size="" color="green"> <%
+ 	out.println("Se han cambiado los valores de la serie " + numSerie + " correctamente");
+ %>
 	</font>
 	<%
-	} catch(Exception ex){
+		} catch (Exception ex) {
 	%>
 	<font color="red"> <%
-		out.println("No se puede modificar correctamente la serie, pruebe de nuevo.");
-	%>
+ 	out.println("No se puede modificar correctamente la serie, pruebe de nuevo.");
+ %>
 	</font>
 	<%
-	}
+		}
 	%>
 	<br>
 	<a style="font-size: 15px;" href="series.jsp"

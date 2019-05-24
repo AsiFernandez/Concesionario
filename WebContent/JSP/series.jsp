@@ -49,10 +49,9 @@
 		<div class="collapse navbar-collapse" id="navbarColor01">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active"><a class="nav-link"
-					href="../index.html">Inicio</a>
-				</li>
-				<li class="nav-item"><a class="nav-link" href="coches.jsp">Coches<span class="sr-only">(current)</span></a>
-				</li>
+					href="../index.html">Inicio</a></li>
+				<li class="nav-item"><a class="nav-link" href="coches.jsp">Coches<span
+						class="sr-only">(current)</span></a></li>
 				<li class="nav-item"><a class="nav-link" href="camiones.jsp">Camiones</a>
 				</li>
 				<li class="nav-item"><a class="nav-link" href="series.jsp">Series</a>
@@ -64,8 +63,8 @@
 	<div class="container">
 		<br>
 		<h1>Series</h1>
-		<a href="insertSerie.jsp" class="btn btn-primary btn-lg"
-			id="insertar">Insertar nueva serie</a>
+		<a href="insertSerie.jsp" class="btn btn-primary btn-lg" id="insertar">Insertar
+			nueva serie</a>
 		<table>
 			<tr>
 				<th>Numero de serie</th>
