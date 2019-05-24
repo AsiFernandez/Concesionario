@@ -2,6 +2,10 @@
 <%@ page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html"%>
 <%
+	String numSerie = request.getParameter("NumeroSerie"); 
+	String marca = request.getParameter("marca"); 
+	String modelo = request.getParameter("modelo");
+	String año_fab = request.getParameter("año_fab");
 	String user = "ConexConcesionario";
 	String contra = "zubiri";
 	String url = "jdbc:mysql://10.18.124.58:3306/";
@@ -40,10 +44,6 @@
 <body>
 	<%
 	try { 
-	String numSerie = request.getParameter("NumSerie"); 
-	String marca = request.getParameter("marca"); 
-	String modelo = request.getParameter("modelo");
-	String año_fab = request.getParameter("año_fab");
 	st.executeUpdate("UPDATE serie SET marca='" + marca + "', modelo='"+modelo+"',año_fab='"+año_fab+"' WHERE NumSerie='" + numSerie +	"'"); 
 	%>
 	<font size="" color="green"> <%out.println("Se han cambiado los valores de la serie "+numSerie+" correctamente");%>
@@ -60,6 +60,6 @@
 	%>
 	<br>
 	<a style="font-size: 15px;" href="series.jsp"
-		class="btn btn-primary btn-lg">Volver a la tabla camiones</a>
+		class="btn btn-primary btn-lg">Volver a la tabla series</a>
 </body>
 </html>
