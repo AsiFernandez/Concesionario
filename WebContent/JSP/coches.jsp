@@ -34,7 +34,7 @@
 <!-- Custom styles for this template -->
 <link href="../css/heroic-features.css" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="../css/style.css">.
+<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
 	<!-- Navigation -->
