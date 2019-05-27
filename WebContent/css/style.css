@@ -18,9 +18,16 @@ img {
 	width: 500px;
 	height: 250px;
 }
-#PieDePagina {
-	position: bottom;
-	background-color: black;
+
+
+#pie{
+	position: fixed;
+	left:0%;
+	bottom:0%;
+	width:0%;
+	background-color: blue;
 	color: white;
-	width: 100%
+	text-align:center;
 }
+
+

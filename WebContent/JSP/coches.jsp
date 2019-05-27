@@ -35,6 +35,7 @@
 <link href="../css/heroic-features.css" rel="stylesheet">
 
 <link rel="stylesheet" type="text/css" href="../css/style.css">
+
 </head>
 <body>
 	<!-- Navigation -->
@@ -76,7 +77,7 @@
 				<th>Numero de Puertas</th>
 				<th>Capacidad del Maletero</th>
 				<th>Editar Coche</th>
-				<th>Comprar Coche</th>   
+				<th>Comprar Coche</th>
 			</tr>
 			<%
 				try {
@@ -109,8 +110,7 @@
 				}
 			%>
 		</table>
-	</div>
-<footer id="PieDePagina"> AJA  ©</footer>
-
+	</div >
+	<div class=" footer" id="pie"> <p>AJA  © 2019</p></div>
 </body>
 </html>
