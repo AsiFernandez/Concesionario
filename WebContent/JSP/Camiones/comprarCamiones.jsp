@@ -66,54 +66,52 @@
 	%>
 
 
-	<table border="1" width="50%">
-		<tr>
+	
 			<td width="100%"><input type="hidden" name="matricula"
 				value="<%=request.getParameter("matricula")%>">
-				<h2 align="center">Comprar camion</h2>
-				<table border="2" width="100%" bgColor="lightgreen">
+				<h2 align="center" style="margin-top:10px;">Comprar camion</h2>
+				<table 
+				width="100%">
 					<tr>
-						<td width="50%" bgColor="lightgreen"><b>Matricula</b></td>
-						<td width="50%" bgColor="lightgreen"><%=rs.getString("matricula")%></td>
+						<td width="50%" ><b>Matricula</b></td>
+						<td width="50%" ><%=rs.getString("matricula")%></td>
 					</tr>
 					<tr>
-						<td width="50%" bgColor="lightgreen"><b>Numero de
+						<td width="50%" ><b>Numero de
 								Bastidor</b></td>
-						<td width="50%" bgColor="lightgreen"><%=rs.getString("numBastidor")%></td>
+						<td width="50%" ><%=rs.getString("numBastidor")%></td>
 					</tr>
 					<tr>
-						<td width="50%" bgColor="lightgreen"><b>Color</b></td>
-						<td width="50%" bgColor="lightgreen"><%=rs.getString("color")%></td>
+						<td width="50%" ><b>Color</b></td>
+						<td width="50%" ><%=rs.getString("color")%></td>
 					</tr>
 					<tr>
-						<td width="50%" bgColor="lightgreen"><b>Numero de
+						<td width="50%" ><b>Numero de
 								Asientos</b></td>
-						<td width="50%" bgColor="lightgreen"><%=rs.getString("numAsientos")%></td>
+						<td width="50%" ><%=rs.getString("numAsientos")%></td>
 					</tr>
 					<tr>
-						<td width="50%" bgColor="lightgreen"><b>Precio</b></td>
-						<td width="50%" bgColor="lightgreen"><%=rs.getString("precio")%></td>
+						<td width="50%" ><b>Precio</b></td>
+						<td width="50%" ><%=rs.getString("precio")%></td>
 					</tr>
 					<tr>
-						<td width="50%" bgColor="lightgreen"><b>Numero de serie</b></td>
-						<td width="50%" bgColor="lightgreen"><%=rs.getString("numSerie")%></td>
+						<td width="50%" ><b>Numero de serie</b></td>
+						<td width="50%" ><%=rs.getString("numSerie")%></td>
 					</tr>
 					<tr>
-						<td width="50%" bgColor="lightgreen"><b>Carga</b></td>
-						<td width="50%" bgColor="lightgreen"><%=rs.getString("carga")%></td>
+						<td width="50%" ><b>Carga</b></td>
+						<td width="50%" ><%=rs.getString("carga")%></td>
 					</tr>
 					<tr>
-						<td width="50%" bgColor="lightgreen"><b>Tipo de
+						<td width="50%" ><b>Tipo de
 								Mercancia</b></td>
-						<td width="50%" bgColor="lightgreen"><%=rs.getString("tipoMercancia")%></td>
+						<td width="50%" ><%=rs.getString("tipoMercancia")%></td>
 					</tr>
 				</table>
 				<a style="font-size: 15px;"
 					href="confirmarCompraCamiones.jsp?Matricula=<%=rs.getString("Matricula")%>"
 					class="btn btn-primary btn-lg">Confirmar</a>
-			</td>
-		</tr>
-	</table>
+		
 	<%
 		}
 		} catch (SQLException ex) {

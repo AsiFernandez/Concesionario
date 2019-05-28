@@ -66,13 +66,12 @@
 	%>
 
 
-	<table border="1" width="50%">
-		<tr>
-			<td>
+	
+			
 				<form method="POST" action="confirmarEditarCoches.jsp">
 					<input type="hidden" name="matricula"
 						value="<%=request.getParameter("matricula")%>">
-					<h2 align="center">Editar coche</h2>
+					<h2 align="center" style="margin-top:10px;">Editar coche</h2>
 					<table>
 						<tr>
 							<td><b>Matricula:</b></td>
@@ -121,10 +120,8 @@
 						<input type="reset"	value="Reset" name="reset" class="btn btn-primary btn-lg">
 					</p>
 				</form>
-			</td>
+			
 
-		</tr>
-	</table>
 	<%
 		}
 		} catch (SQLException ex) {

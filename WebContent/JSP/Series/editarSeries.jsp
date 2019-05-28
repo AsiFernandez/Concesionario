@@ -65,36 +65,34 @@
 	%>
 
 
-	<table border="1" width="50%">
-		<tr>
-			<td width="100%">
+			
 				<form method="POST" action="confirmarEditarSeries.jsp">
 					<input type="hidden" name="NumSerie"
 						value="<%=request.getParameter("NumSerie")%>">
 					<h2 align="center">Editar serie</h2>
-					<table border="2" width="100%" bgColor="lightgreen">
+					<table  width="100%" >
 						<tr>
-							<td width="50%" bgColor="lightgreen"><b>Numero de serie:</b></td>
-							<td width="50%" bgColor="lightgreen"><input type="text"
+							<td width="50%"><b>Numero de serie:</b></td>
+							<td width="50%"><input type="text"
 								name="NumeroSerie" onClick="<%=rs.getString("NumSerie")%>"
 								size="15"></td>
 						</tr>
 						<tr>
-							<td width="50%" bgColor="lightgreen"><b>Marca del
+							<td width="50%" ><b>Marca del
 									vehiculo:</b></td>
-							<td width="50%" bgColor="lightgreen"><input type="text"
+							<td width="50%" ><input type="text"
 								name="marca" value="<%=rs.getString("marca")%>" size="15"></td>
 						</tr>
 						<tr>
-							<td width="50%" bgColor="lightgreen"><b>Modelo del
+							<td width="50%" ><b>Modelo del
 									vehiculo:</b></td>
-							<td width="50%" bgColor="lightgreen"><input type="text"
+							<td width="50%" ><input type="text"
 								name="modelo" value="<%=rs.getString("modelo")%>" size="15"></td>
 						</tr>
 						<tr>
-							<td width="50%" bgColor="lightgreen"><b>Año de
+							<td width="50%"><b>Año de
 									fabricacion:</b></td>
-							<td width="50%" bgColor="lightgreen"><input type="text"
+							<td width="50%"><input type="text"
 								name="año_fab" value="<%=rs.getString("año_fab")%>" size="15"></td>
 						</tr>
 					</table>
@@ -105,10 +103,8 @@
 							value="Reset" name="reset" class="btn btn-primary btn-lg">
 					</p>
 				</form>
-			</td>
+			
 
-		</tr>
-	</table>
 	<%
 		}
 		} catch (SQLException ex) {

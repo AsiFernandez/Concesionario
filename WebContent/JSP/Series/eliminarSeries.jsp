@@ -66,35 +66,33 @@
 	%>
 
 
-	<table border="1" width="50%">
-		<tr>
+
 			<td width="100%"><input type="hidden" name="numSerie"
 				value="<%=request.getParameter("numSerie")%>">
-				<h2 align="center">Eliminar Serie</h2>
-				<table border="2" width="100%" bgColor="lightgreen">
+				<h2 align="center" style="margin-top:10px;">Eliminar Serie</h2>
+				<table  width="100%" >
 					<tr>
-						<td width="50%" bgColor="lightgreen"><b>Numero de serie:</b></td>
-						<td width="50%" bgColor="lightgreen"><%=rs.getString("NumSerie")%></td>
+						<td width="50%"><b>Numero de serie:</b></td>
+						<td width="50%"><%=rs.getString("NumSerie")%></td>
 					</tr>
 					<tr>
-						<td width="50%" bgColor="lightgreen"><b>Marca:</b></td>
-						<td width="50%" bgColor="lightgreen"><%=rs.getString("marca")%></td>
+						<td width="50%" ><b>Marca:</b></td>
+						<td width="50%" ><%=rs.getString("marca")%></td>
 					</tr>
 					<tr>
-						<td width="50%" bgColor="lightgreen"><b>Modelo:</b></td>
-						<td width="50%" bgColor="lightgreen"><%=rs.getString("modelo")%></td>
+						<td width="50%" ><b>Modelo:</b></td>
+						<td width="50%" ><%=rs.getString("modelo")%></td>
 					</tr>
 					<tr>
-						<td width="50%" bgColor="lightgreen"><b>Año de frabricacion:</b></td>
-						<td width="50%" bgColor="lightgreen"><%=rs.getString("año_fab")%></td>
+						<td width="50%" ><b>Año de frabricacion:</b></td>
+						<td width="50%" ><%=rs.getString("año_fab")%></td>
 					</tr>
 				</table>
 				<a style="font-size: 15px;"
 					href="confirmarEliminarSerie.jsp?numSerie=<%=rs.getString("NumSerie")%>"
 					class="btn btn-primary btn-lg">Confirmar</a>
 			</td>
-		</tr>
-	</table>
+
 	<%
 		}
 		} catch (SQLException ex) {

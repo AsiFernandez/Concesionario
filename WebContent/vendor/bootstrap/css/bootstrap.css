@@ -1739,7 +1739,7 @@ pre code {
 }
 
 .table-hover tbody tr:hover {
-  background-color: rgba(0, 0, 0, 0.075);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .table-primary,
@@ -1869,7 +1869,7 @@ pre code {
 }
 
 .table-hover .table-active:hover {
-  background-color: rgba(0, 0, 0, 0.075);
+  background-color: #EDA275;
 }
 
 .table-hover .table-active:hover > td,
