@@ -29,12 +29,12 @@
 <link href="/media/open-iconic/font/css/open-iconic-bootstrap.css"
 	rel="stylesheet">
 <!-- Bootstrap core CSS -->
-<link href="../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="../../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
-<link href="../css/heroic-features.css" rel="stylesheet">
+<link href="../../css/heroic-features.css" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
 </head>
 <body>
 	<!-- Navigation -->
