@@ -50,7 +50,7 @@
 				<li class="nav-item"><a class="nav-link" href="../Coches/coches.jsp">Coches</a>
 				</li>
 				<li class="nav-item"><a class="nav-link"
-					href="camiones.jsp">Camiones</a></li>
+					href="../Camiones/camiones.jsp">Camiones</a></li>
 				<li class="nav-item"><a class="nav-link" href="../Series/series.jsp">Series</a>
 				</li>
 			</ul>
@@ -74,25 +74,19 @@
 				<table border="2" width="100%" bgColor="lightgreen">
 					<tr>
 						<td width="50%" bgColor="lightgreen"><b>Numero de serie:</b></td>
-						<td width="50%" bgColor="lightgreen"><input type="text"
-							name="Matricula" value="<%=rs.getString("NumSerie")%>" size="50" /></td>
+						<td width="50%" bgColor="lightgreen"><%=rs.getString("NumSerie")%></td>
 					</tr>
 					<tr>
 						<td width="50%" bgColor="lightgreen"><b>Marca:</b></td>
-						<td width="50%" bgColor="lightgreen"><input type="text"
-							name="numBastidor" value="<%=rs.getString("marca")%>"
-							size="50"></td>
+						<td width="50%" bgColor="lightgreen"><%=rs.getString("marca")%></td>
 					</tr>
 					<tr>
 						<td width="50%" bgColor="lightgreen"><b>Modelo:</b></td>
-						<td width="50%" bgColor="lightgreen"><input type="text"
-							name="color" value="<%=rs.getString("modelo")%>" size="15"></td>
+						<td width="50%" bgColor="lightgreen"><%=rs.getString("modelo")%></td>
 					</tr>
 					<tr>
 						<td width="50%" bgColor="lightgreen"><b>Año de frabricacion:</b></td>
-						<td width="50%" bgColor="lightgreen"><input type="text"
-							name="numAsientos" value="<%=rs.getString("año_fab")%>"
-							size="50" /></td>
+						<td width="50%" bgColor="lightgreen"><%=rs.getString("año_fab")%></td>
 					</tr>
 				</table>
 				<a style="font-size: 15px;"
