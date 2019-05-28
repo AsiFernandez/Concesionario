@@ -27,12 +27,12 @@
 <link href="/media/open-iconic/font/css/open-iconic-bootstrap.css"
 	rel="stylesheet">
 <!-- Bootstrap core CSS -->
-<link href="../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="../../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
-<link href="../css/heroic-features.css" rel="stylesheet">
+<link href="../../css/heroic-features.css" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
 </head>
 <body>
 	<!-- Navigation -->
@@ -47,13 +47,13 @@
 		<div class="collapse navbar-collapse" id="navbarColor01">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active"><a class="nav-link"
-					href="../index.html">Inicio</a>
+					href="../../index.html">Inicio</a>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="coches.jsp">Coches</a>
+				<li class="nav-item"><a class="nav-link" href="../Coches/coches.jsp">Coches</a>
 				</li>
 				<li class="nav-item"><a class="nav-link" href="camiones.jsp">Camiones</a>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="series.jsp">Series</a>
+				<li class="nav-item"><a class="nav-link" href="../Series/series.jsp">Series</a>
 				</li>
 			</ul>
 		</div>

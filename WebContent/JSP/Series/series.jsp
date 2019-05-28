@@ -29,18 +29,18 @@
 <link href="/media/open-iconic/font/css/open-iconic-bootstrap.css"
 	rel="stylesheet">
 <!-- Bootstrap core CSS -->
-<link href="../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="../../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
-<link href="../css/heroic-features.css" rel="stylesheet">
+<link href="../../css/heroic-features.css" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
 </head>
 <body>
 
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-		<a class="navbar-brand" href="../index.html">AJA</a>
+		<a class="navbar-brand" href="../../index.html">AJA</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarColor01" aria-controls="navbarColor01"
 			aria-expanded="false" aria-label="Toggle navigation">
@@ -51,9 +51,9 @@
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active"><a class="nav-link"
 					href="../index.html">Inicio</a></li>
-				<li class="nav-item"><a class="nav-link" href="coches.jsp">Coches<span
+				<li class="nav-item"><a class="nav-link" href="../Coches/coches.jsp">Coches<span
 						class="sr-only">(current)</span></a></li>
-				<li class="nav-item"><a class="nav-link" href="camiones.jsp">Camiones</a>
+				<li class="nav-item"><a class="nav-link" href="../Camiones/camiones.jsp">Camiones</a>
 				</li>
 				<li class="nav-item"><a class="nav-link" href="series.jsp">Series</a>
 				</li>
