@@ -102,7 +102,9 @@
 					System.out.println(e.getMessage());
 				}
 			%>
-			<input type="submit" value="Insertar Datos"> <br> <br>
+			<br>
+			<br>
+			<input type="submit" value="Insertar Datos" class="btn btn-primary btn-lg"> <br> <br>
 		</form>
 	</div>
 	<!-- /.container -->

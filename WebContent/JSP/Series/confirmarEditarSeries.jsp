@@ -53,13 +53,13 @@
 		<div class="collapse navbar-collapse" id="navbarColor01">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active"><a class="nav-link"
-					href="../../index.html">Inicio</a>
+					href="../index.html">Inicio</a>
 				</li>
 				<li class="nav-item"><a class="nav-link" href="../Coches/coches.jsp">Coches</a>
 				</li>
 				<li class="nav-item"><a class="nav-link"
-					href="camiones.jsp">Camiones</a></li>
-				<li class="nav-item"><a class="nav-link" href="../Series/series.jsp">Series</a>
+					href="../Camiones/camiones.jsp">Camiones</a></li>
+				<li class="nav-item"><a class="nav-link" href="series.jsp">Series</a>
 				</li>
 			</ul>
 		</div>

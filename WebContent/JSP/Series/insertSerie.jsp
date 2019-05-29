@@ -24,7 +24,7 @@
 <body>
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-		<a class="navbar-brand" href="../../index.html">AJA</a>
+		<a class="navbar-brand" href="../index.html">AJA</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarColor01" aria-controls="navbarColor01"
 			aria-expanded="false" aria-label="Toggle navigation">
@@ -36,10 +36,10 @@
 					href="../index.html">Inicio</a></li>
 				<li class="nav-item"><a class="nav-link"
 					href="../Coches/coches.jsp">Coches</a></li>
-				<li class="nav-item"><a class="nav-link" href="camiones.jsp">Camiones</a>
+				<li class="nav-item"><a class="nav-link" href="../Camiones/camiones.jsp">Camiones</a>
 				</li>
 				<li class="nav-item"><a class="nav-link"
-					href="../Series/series.jsp">Series</a></li>
+					href="series.jsp">Series</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -55,8 +55,8 @@
 			<p>Modelo:</p>
 			<input name="modelo">
 			<p>Año de fabricacion:</p>
-			<input name="añoFab"> <br> <br> <br> <br>
-			<input type="submit" value="Insertar Datos"> <br> <br>
+			<input name="añoFab"> <br> <br>
+			<input type="submit" value="Insertar Datos" class="btn btn-primary btn-lg"> <br> <br>
 		</form>
 	</div>
 	<!-- /.container -->
