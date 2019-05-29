@@ -1,19 +1,7 @@
 <%@ page import="java.util.*"%>
 <%@ page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html"%>
-<%
-	String matricula = request.getParameter("Matricula");
-	Connection conn = null;
-	String url = "jdbc:mysql://10.18.124.58:3306/";
-	String db = "concesionario";
-	String driver = "com.mysql.jdbc.Driver";
-	try {
-		Class.forName(driver);
-		conn = DriverManager.getConnection(url + db, "ConexConcesionario", "zubiri");
-	} catch (Exception e) {
-		e.printStackTrace();
-	}
-%> 
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -48,28 +36,37 @@
 		<div class="collapse navbar-collapse" id="navbarColor01">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active"><a class="nav-link"
-					href="../index.html">Inicio</a>
-				</li>
+					href="../index.html">Inicio</a></li>
 				<li class="nav-item"><a class="nav-link" href="coches.jsp">Coches</a>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="../Camiones/camiones.jsp">Camiones</a>
-				</li>
-				<li class="nav-item"><a class="nav-link" href="../Series/series.jsp">Series</a>
-				</li>
+				<li class="nav-item"><a class="nav-link"
+					href="../Camiones/camiones.jsp">Camiones</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="../Series/series.jsp">Series</a></li>
 			</ul>
 		</div>
 	</nav>
 	<!-- Page Content -->
-	
 	<%
-				try {
-					Statement st = conn.createStatement();
-					String sql = "select numSerie from serie ";
-					ResultSet rs = st.executeQuery(sql);
-					
+		String matricula = request.getParameter("Matricula");
+		Connection conn = null;
+		String url = "jdbc:mysql://10.18.124.58:3306/";
+		String db = "concesionario";
+		String driver = "com.mysql.jdbc.Driver";
+		try {
+			Class.forName(driver);
+			conn = DriverManager.getConnection(url + db, "ConexConcesionario", "zubiri");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		try {
+			Statement st = conn.createStatement();
+			String sql = "select numSerie from serie ";
+			ResultSet rs = st.executeQuery(sql);
 	%>
-	
-	
+
+
 	<div class="container">
 		<h1>Insertar coche</h1>
 		<form method="post" action="verificarInsertarCoche.jsp">
@@ -87,26 +84,26 @@
 			<p>Numero de puertas:</p>
 			<input name="puertas">
 			<p>Capacidad del maletero:</p>
-			<input name="maletero"> 
+			<input name="maletero">
 			<p>Numero de serie:</p>
 			<select name="numSerie" style="width: 170px">
-			<%
-			while (rs.next()) {
-			%>
-   			<option value="<%=rs.getString("numSerie")%>"><%=rs.getString("numSerie")%></option>
-   			<%} %> 
-			</select>
-			
-			
-			<br> <br> <input type="submit" value="Insertar Datos" class="btn btn-primary btn-lg"> <br> <br>
+				<%
+					while (rs.next()) {
+				%>
+				<option value="<%=rs.getString("numSerie")%>"><%=rs.getString("numSerie")%></option>
+				<%
+					}
+				%>
+			</select> <br> <br> <input type="submit" value="Insertar Datos"
+				class="btn btn-primary btn-lg"> <br> <br>
 		</form>
 	</div>
 	<%
-				} catch (Exception e) {
-					System.out.println(e.getMessage());
-				}
-			%>
-	
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	%>
+
 	<!-- /.container -->
 	<!-- Footer -->
 	<footer class="py-5 bg-dark">
