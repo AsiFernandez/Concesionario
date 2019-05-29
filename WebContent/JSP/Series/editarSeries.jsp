@@ -74,7 +74,7 @@
 						<tr>
 							<td width="50%"><b>Numero de serie:</b></td>
 							<td width="50%"><input type="text"
-								name="NumeroSerie" onClick="<%=rs.getString("NumSerie")%>"
+								name="NumeroSerie" value="<%=rs.getString("NumSerie")%>"
 								size="15"></td>
 						</tr>
 						<tr>

@@ -30,18 +30,16 @@
 			aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-
 		<div class="collapse navbar-collapse" id="navbarColor01">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active"><a class="nav-link"
-					href="../index.html">Inicio</a>
-				</li>
-				<li class="nav-item"><a class="nav-link" href="../Coches/coches.jsp">Coches</a>
-				</li>
+					href="../index.html">Inicio</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="../Coches/coches.jsp">Coches</a></li>
 				<li class="nav-item"><a class="nav-link" href="camiones.jsp">Camiones</a>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="../Series/series.jsp">Series</a>
-				</li>
+				<li class="nav-item"><a class="nav-link"
+					href="../Series/series.jsp">Series</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -57,9 +55,7 @@
 			<p>Modelo:</p>
 			<input name="modelo">
 			<p>Año de fabricacion:</p>
-			<input name="añoFab"> <br> <br>
-			<br>
-			<br> 
+			<input name="añoFab"> <br> <br> <br> <br>
 			<input type="submit" value="Insertar Datos"> <br> <br>
 		</form>
 	</div>

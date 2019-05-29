@@ -83,7 +83,11 @@
 			<p>Carga:</p>
 			<input name="carga">
 			<p>Tipo de mercancia:</p>
-			<input name="mercancia">
+			<select name="mercancia" style="width: 170px">
+				<option value="G">G (General)</option>
+				<option value="A">A (Árido)</option>
+				<option value="P">P (Peligrosa)</option>
+			</select>
 			<p>Numero de serie:</p>
 			<select name="numSerie" style="width: 170px">
 			<%
