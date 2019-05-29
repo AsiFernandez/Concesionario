@@ -17,9 +17,9 @@
 			st = conn.createStatement();
 		} catch(Exception ex){
 		%>
-<font color="red"> <%
-			out.println("No se puede conectar con la base de datos");
-		%>
+<font color="red"> 
+<h2 style=" color:red">No se puede conectar con la base de datos</h2>
+		
 </font>
 <%
 		}
@@ -93,9 +93,8 @@
 		} catch(Exception ex){
 			System.out.println(ex.getMessage());
 		%>
-		<font color="red"> <%
-			out.println("No se puede añadir correctamente al coche, pruebe de nuevo.");
-		%>
+		<font color="red"> <h4> No se puede añadir correctamente al coche, pruebe de nuevo.</h4>
+		
 		</font>
 		<%
 		}
@@ -105,14 +104,7 @@
 				onclick="location.href='coches.jsp'">
 		</form>
 	</div>
-	<!-- /.container -->
-	<!-- Footer -->
-	<footer class="py-5 bg-dark">
-		<div class="container">
-			<p class="m-0 text-center text-white">Copyright &copy; AJA 2019</p>
-		</div>
-		<!-- /.container -->
-	</footer>
+	
 
 	<!-- Bootstrap core JavaScript -->
 	<script src="vendor/jquery/jquery.min.js"></script>
