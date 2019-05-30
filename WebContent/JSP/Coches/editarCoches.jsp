@@ -116,8 +116,8 @@
 		<p>
 
 			<input type="submit" value="Confirmar" name="confirmar"
-				class="btn btn-primary btn-lg"> <input type="reset"
-				value="Reset" name="reset" class="btn btn-primary btn-lg">
+				class="btn btn-primary btn-lg" style="margin-top:10px; margin-left:43%"> <input type="reset"
+				value="Reset" name="reset" class="btn btn-primary btn-lg" style="margin-top:10px;" >
 		</p>
 	</form>
 

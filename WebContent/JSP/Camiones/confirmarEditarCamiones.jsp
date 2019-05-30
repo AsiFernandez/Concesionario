@@ -80,7 +80,7 @@
 	}
 	%>
 	<br>
-	<a style="font-size: 15px;" href="camiones.jsp"
+	<a style="font-size: 15px; margin-left="" href="camiones.jsp"
 		class="btn btn-primary btn-lg">Volver a la tabla camiones</a>
 </body>
 </html>

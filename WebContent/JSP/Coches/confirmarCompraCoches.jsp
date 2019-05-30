@@ -52,12 +52,12 @@
 				</li>
 				<li class="nav-item"><a class="nav-link"
 					href="../Camiones/camiones.jsp">Camiones</a></li>
-				<li class="nav-item"><a class="nav-link" href="../Series/series.jsp">Series</a>
-				</li>
+				<li class="nav-item"><a class="nav-link"
+					href="../Series/series.jsp">Series</a></li>
 			</ul>
 		</div>
 	</nav>
-<h1>Comprar coche</h1>
+	<h1 style="color: black; margin-left: 43%; margin-top:10px;">Comprar coche</h1>
 	<%
 		try {
 			conn = DriverManager.getConnection(url + db, "ConexConcesionario", "zubiri");
@@ -65,23 +65,24 @@
 			String Query = "DELETE FROM vehiculos WHERE Matricula ='" + stringMatricula + "'";
 			st.executeUpdate(Query);
 		%>
-		<font size="" color="green"> <%
- 		out.println("Se ha comprado el coche correctamente");
-		%>
-		</font>
-		<%
+	<h4 style="color: green; margin-left: 40%;">Se ha comprado el
+		coche correctamente</h4>
+
+
+	<%
 		} catch (Exception ex) {
 			System.out.println(ex.getMessage());
 		%>
-		<font color="red"> <%
- 		out.println("No se puede eliminar el coche correctamente, pruebe de nuevo.");
- 		%>
-		</font>
-		<%
+
+	<h4 style="color: red; margin-left: 45%;">No se puede eliminar el
+		coche correctamente, pruebe de nuevo.</h4>
+
+
+	<%
 		}
 		%>
-		<br>
-		<a style="font-size: 15px;" href="coches.jsp"
+	<br>
+	<a style="font-size: 15px; margin-left: 43%;" href="coches.jsp"
 		class="btn btn-primary btn-lg">Volver a la tabla coches</a>
 </body>
 </html>

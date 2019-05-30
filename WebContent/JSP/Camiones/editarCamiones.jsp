@@ -66,76 +66,74 @@
 	%>
 
 
-	<table border="1" width="50%">
-		<tr>
+	
 			<td width="100%">
 				<form method="POST" action="confirmarEditarCamiones.jsp">
 					<input type="hidden" name="matricula"
 						value="<%=request.getParameter("matricula")%>">
-					<h2 align="center">Comprar camion</h2>
-					<table border="2" width="100%" bgColor="lightgreen">
+					<h2 align="center" style="margin-top: 10px;">Editar camion</h2>
+					<table  width="100%" >
 						<tr>
-							<td width="50%" bgColor="lightgreen"><b>Matricula:</b></td>
-							<td width="50%" bgColor="lightgreen"><input type="text"
+							<td width="50%" ><b>Matricula:</b></td>
+							<td width="50%" ><input type="text"
 								name="maatricula"
-								value="<%=rs.getString("matricula")%>" size="15"></td>
+								value="<%=rs.getString("matricula")%>" size="15" readonly></td>
 						</tr>
 						<tr>
-							<td width="50%" bgColor="lightgreen"><b>Numero de
+							<td width="50%" ><b>Numero de
 									Bastidor:</b></td>
-							<td width="50%" bgColor="lightgreen"><input type="text"
+							<td width="50%" ><input type="text"
 								name="maatricula"
 								value="<%=rs.getString("numBastidor")%>" disabled size="15"></td>
 						</tr>
 						<tr>
-							<td width="50%" bgColor="lightgreen"><b>Color:</b></td>
-							<td width="50%" bgColor="lightgreen"><input type="text"
+							<td width="50%" ><b>Color:</b></td>
+							<td width="50%" ><input type="text"
 								name="color" value="<%=rs.getString("color")%>" size="15"></td>
 						</tr>
 						<tr>
-							<td width="50%" bgColor="lightgreen"><b>Numero de
+							<td width="50%"><b>Numero de
 									Asientos:</b></td>
-							<td width="50%" bgColor="lightgreen"><input type="text"
+							<td width="50%" ><input type="text"
 								name="maatricula"
 								value="<%=rs.getString("numAsientos")%>" disabled size="15"></td>
 						</tr>
 						<tr>
-							<td width="50%" bgColor="lightgreen"><b>Precio:</b></td>
-							<td width="50%" bgColor="lightgreen"><input type="text"
+							<td width="50%" ><b>Precio:</b></td>
+							<td width="50%"><input type="text"
 								name="maatricula" value="<%=rs.getString("precio")%>" disabled
 								size="15"></td>
 						</tr>
 						<tr>
-							<td width="50%" bgColor="lightgreen"><b>Numero de serie:</b></td>
-							<td width="50%" bgColor="lightgreen"><input type="text"
+							<td width="50%"><b>Numero de serie:</b></td>
+							<td width="50%"><input type="text"
 								name="maatricula" value="<%=rs.getString("numSerie")%>" disabled
 								size="15"></td>
 						</tr>
 						<tr>
-							<td width="50%" bgColor="lightgreen"><b>Capacidad de carga:</b></td>
-							<td width="50%" bgColor="lightgreen"><input type="text"
+							<td width="50%"><b>Capacidad de carga:</b></td>
+							<td width="50%"><input type="text"
 								name="maatricula"
 								value="<%=rs.getString("carga")%>" disabled size="15"></td>
 						</tr>
 						<tr>
-							<td width="50%" bgColor="lightgreen"><b>Tipo de mercancia:</b></td>
-							<td width="50%" bgColor="lightgreen"><input type="text"
+							<td width="50%"><b>Tipo de mercancia:</b></td>
+							<td width="50%"><input type="text"
 								name="maatricula"
 								value="<%=rs.getString("tipoMercancia")%>" disabled
 								size="15"></td>
 						</tr>
-					</table>
+						
+					</table >
 					<p>
 
 						<input type="submit" value="Confirmar" name="confirmar"
-							class="btn btn-primary btn-lg"> 
-						<input type="reset"	value="Reset" name="reset" class="btn btn-primary btn-lg">
+							class="btn btn-primary btn-lg" style="margin-top:10px; margin-left:43%;"> 
+						<input type="reset"	value="Reset" name="reset" class="btn btn-primary btn-lg" style="margin-top:10px;">
 					</p>
 				</form>
 			</td>
-
-		</tr>
-	</table>
+			
 	<%
 		}
 		} catch (SQLException ex) {
@@ -143,12 +141,7 @@
 		}
 	%>
 </body>
-<footer class="py-5 bg-dark">
-	<div class="container">
-		<p class="m-0 text-center text-white">Copyright &copy; AJA 2019</p>
-	</div>
-	<!-- /.container -->
-</footer>
+
 
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>

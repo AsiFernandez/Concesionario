@@ -74,10 +74,7 @@
 		<%
 		} catch (Exception ex) {
 		%>
-		<font color="red"> <%
- 		out.println("No se puede modificar correctamente el color del coche, pruebe de nuevo.");
- 		%>
-		</font>
+		<h4 style="color: red; margin-left: 40%;">No se puede modificar correctamente el color del coche, pruebe de nuevo.</h4>
 		<%
 		}
 		%>
