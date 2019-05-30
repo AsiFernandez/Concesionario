@@ -64,12 +64,13 @@
 	%>
 
 
-	<table>
-		<tr>
+	
 			<td width="100%"><input type="hidden" name="matricula"
 				value="<%=request.getParameter("matricula")%>">
 				<h2 align="center" style="margin-top: 10px;">Comprar camion</h2>
 				<table width="100%">
+				<input type="hidden" name="matricula"
+				value="<%=request.getParameter("matricula")%>">
 					<tr>
 						<td width="50%"><b>Matricula</b></td>
 						<td width="50%"><%=rs.getString("matricula")%></td>
@@ -102,11 +103,10 @@
 						<td width="50%"><b>Tipo de Mercancia</b></td>
 						<td width="50%"><%=rs.getString("tipoMercancia")%></td>
 					</tr>
-				</table> <a style="font-size: 15px;"
+				</table> <a style="font-size: 15px; margin-left:47%; margin-top:10px;""
 				href="confirmarCompraCamiones.jsp?Matricula=<%=rs.getString("Matricula")%>"
 				class="btn btn-primary btn-lg">Confirmar</a></td>
-		</tr>
-	</table>
+	
 
 	<%
 		}
@@ -115,12 +115,7 @@
 		}
 	%>
 </body>
-<footer class="py-5 bg-dark">
-	<div class="container">
-		<p class="m-0 text-center text-white">Copyright &copy; AJA 2019</p>
-	</div>
-	<!-- /.container -->
-</footer>
+
 
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>

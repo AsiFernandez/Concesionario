@@ -57,20 +57,21 @@
 			</ul>
 		</div>
 	</nav>
-<h1>Comprar camion</h1>
+<h1 style="color:black; margin-left:43%;">Comprar camion</h1>
 	<%
 		try {
 			conn = DriverManager.getConnection(url + db, "ConexConcesionario", "zubiri");
 			st = conn.createStatement();
 			String Query = "DELETE FROM vehiculos WHERE Matricula ='"+stringMatricula+ "'";
 			st.executeUpdate(Query);
-			out.println("<p> Camion vendido Correctamente </p>");
-			out.println("<br>");
+		%>
+			<h4 style="color:green; margin-left:42%;"> Camion vendido Correctamente </h4>
+		<%	
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
 	%>
-	<a style="font-size: 15px;" href="camiones.jsp"
+	<a style="font-size: 15px;margin-left:43%" href="camiones.jsp"
 		class="btn btn-primary btn-lg">Volver a la tabla camiones</a>
 </body>
 </html>

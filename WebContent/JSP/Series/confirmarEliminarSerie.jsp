@@ -57,7 +57,7 @@
 			</ul>
 		</div>
 	</nav>
-<h1>Eliminar serie</h1>
+<h1 style=" margin-left:44%;">Eliminar serie</h1>
 	<%
 		try {
 			conn = DriverManager.getConnection(url + db, "ConexConcesionario", "zubiri");
@@ -65,23 +65,18 @@
 			String Query = "DELETE FROM serie WHERE NumSerie ='" + numSerie + "'";
 			st.executeUpdate(Query);
 			%>
-			<font size="" color="green"> <%
-	 		out.println("Se ha eliminado la serie correctamente");
-			%>
-			</font>
+			<h4 style="color:green; margin-left:40%;">Se ha eliminado la serie correctamente</h4>
+			
 			<%
 			} catch (Exception ex) {
 				System.out.println(ex.getMessage());
 			%>
-			<font color="red"> <%
-	 		out.println("No se puede eliminar la serie correctamente, pruebe de nuevo.");
-	 		%>
-			</font>
-			<%
+			<h4 style="color:red; margin-left:42%;">No se puede eliminar la serie correctamente, pruebe de nuevo.</h4>
+	 		<%
 			}
 			%>
 			<br>
-	<a style="font-size: 15px;" href="series.jsp"
+	<a style="font-size: 15px; margin-left:43%; margin-top:10px;" href="series.jsp"
 		class="btn btn-primary btn-lg">Volver a la tabla series</a>
 </body>
 </html>

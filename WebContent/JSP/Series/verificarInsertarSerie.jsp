@@ -93,7 +93,7 @@
 		%>
 		<form method="post" action="index.jsp">
 			<input type="button" value="Volver a la tabla serie"
-				onclick="location.href='series.jsp'">
+				onclick="location.href='series.jsp'" class="btn btn-primary btn-lg">
 		</form>
 	</div>
 	<!-- /.container -->

@@ -88,7 +88,7 @@
 						<td width="50%" ><%=rs.getString("año_fab")%></td>
 					</tr>
 				</table>
-				<a style="font-size: 15px;"
+				<a style="font-size: 15px; margin-left:47%; margin-top:10px;"
 					href="confirmarEliminarSerie.jsp?numSerie=<%=rs.getString("NumSerie")%>"
 					class="btn btn-primary btn-lg">Confirmar</a>
 			</td>
