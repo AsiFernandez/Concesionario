@@ -6,7 +6,7 @@
 	String url = "jdbc:mysql://10.18.124.58:3306/";
 	String db = "concesionario";
 	String driver = "com.mysql.jdbc.Driver";
-	try {
+	try { 
 		Class.forName(driver);
 	} catch (Exception ex) {
 		System.out.print(ex.getMessage());
