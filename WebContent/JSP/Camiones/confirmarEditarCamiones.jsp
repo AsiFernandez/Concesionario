@@ -60,27 +60,27 @@
 			</ul>
 		</div>
 	</nav>
-<h1>Editar camion</h1>
+<h1 style="margin-top:10px; margin-left:40%">Editar camion</h1>
 	<%
 	try { 
 	String matricula2 = request.getParameter("maatricula"); 
 	String kolor = request.getParameter("color"); 
 	st.executeUpdate("UPDATE vehiculos SET color='" + kolor + "' WHERE Matricula='" + matricula2 +	"'"); 
 	%>
-	<font size="" color="green"> <%out.println("Se ha cambiado el color del camion con matricula "+matricula2+" al color "+kolor+" correctamente");%>
-	</font>
+	<h4 style="color:green; margin-top:10px; margin-left:28%"><%out.println("Se ha cambiado el color del camion con matricula "+matricula2+" al color "+kolor+" correctamente");%>
+	</h4>
 	<%
 	} catch(Exception ex){
 	%>
-	<font color="red"> <%
+	<h4 color="red;" style="margin-top:10px; margin-left:43%"><%
 		out.println("No se puede modificar correctamente el color del coche, pruebe de nuevo.");
 	%>
-	</font>
+	</h4>
 	<%
 	}
 	%>
 	<br>
-	<a style="font-size: 15px; margin-left="" href="camiones.jsp"
+	<a style="font-size: 15px; margin-left:39%;" href="camiones.jsp"
 		class="btn btn-primary btn-lg">Volver a la tabla camiones</a>
 </body>
 </html>
