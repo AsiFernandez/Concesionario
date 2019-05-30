@@ -64,16 +64,16 @@
 			</ul>
 		</div>
 	</nav>
-<h1>Editar serie</h1>
+<h1 style="margin-top:10px; margin-left:41%">Editar serie</h1>
 	<%
 		try {
 			st.executeUpdate("UPDATE serie SET marca='" + marca + "', modelo='" + modelo + "',año_fab='" + año_fab
 					+ "' WHERE NumSerie='" + numSerie + "'");
 	%>
-	<font size="" color="green"> <%
+	<h4 style="color:green; margin-top:10px; margin-left:33%"> <%
  	out.println("Se han cambiado los valores de la serie " + numSerie + " correctamente");
  %>
-	</font>
+	</h4>
 	<%
 		} catch (Exception ex) {
 	%>
@@ -85,7 +85,7 @@
 		}
 	%>
 	<br>
-	<a style="font-size: 15px;" href="series.jsp"
+	<a style="font-size: 15px; margin-left:39%;" href="series.jsp"
 		class="btn btn-primary btn-lg">Volver a la tabla series</a>
 </body>
 </html>

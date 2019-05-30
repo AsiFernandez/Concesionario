@@ -44,6 +44,7 @@
 			</ul>
 		</div>
 	</nav>
+	<h1 style="margin-top:10px; margin-left:40%"> Editar Coches</h1>
 	<%
 		String user = "ConexConcesionario";
 		String contra = "zubiri";
@@ -66,7 +67,7 @@
 			String kolor = request.getParameter("color");
 			st.executeUpdate("UPDATE vehiculos SET color='" + kolor + "' WHERE Matricula='" + matricula2 + "'");
 		%>
-		<font size="" color="green"> <%
+		<h4 style="color:green; margin-top:10px; margin-left:28%"> <%
  		out.println("Se ha cambiado el color del coche con matricula " + matricula2 + " al color " + kolor
  				+ " correctamente");
 		%>
@@ -79,7 +80,7 @@
 		}
 		%>
 		<br>
-		<a style="font-size: 15px;" href="coches.jsp"
+		<a style="font-size: 15px; margin-left:15%;" href="coches.jsp"
 		class="btn btn-primary btn-lg">Volver a la tabla coches</a>
 </body>
 </html>
