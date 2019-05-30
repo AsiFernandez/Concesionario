@@ -88,12 +88,12 @@
 			%>
 			<tr>
 				<td><%=rs.getString("Matricula")%></td>
-				<td><%=rs.getInt("numBastidor")%></td>
+				<td><%=rs.getString("numBastidor")%></td>
 				<td><%=rs.getString("color")%></td>
-				<td><%=rs.getInt("numAsientos")%></td>
-				<td><%=rs.getFloat("precio")%></td>
-				<td><%=rs.getInt("numSerie")%></td>
-				<td><%=rs.getInt("carga")%></td>
+				<td><%=rs.getString("numAsientos")%></td>
+				<td><%=rs.getString("precio")%></td>
+				<td><%=rs.getString("numSerie")%></td>
+				<td><%=rs.getString("carga")%></td>
 				<td><%=rs.getString("tipoMercancia")%></td>
 				<td><a style="font-size: 15px;"
 					href="editarCamiones.jsp?Matricula=<%=rs.getString("Matricula")%>"
