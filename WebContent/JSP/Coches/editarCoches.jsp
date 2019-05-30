@@ -1,19 +1,7 @@
 <%@ page import="java.util.*"%>
 <%@ page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html"%>
-<%
-	String matricula = request.getParameter("Matricula");
-	Connection con = null;
-	String url = "jdbc:mysql://10.18.124.58:3306/";
-	String db = "concesionario";
-	String driver = "com.mysql.jdbc.Driver";
-	try {
-		Class.forName(driver);
-		con = DriverManager.getConnection(url + db, "ConexConcesionario", "zubiri");
-	} catch (Exception e) {
-		e.printStackTrace();
-	}
-%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,12 +39,23 @@
 				</li>
 				<li class="nav-item"><a class="nav-link"
 					href="../Camiones/camiones.jsp">Camiones</a></li>
-				<li class="nav-item"><a class="nav-link" href="../Series/series.jsp">Series</a>
-				</li>
+				<li class="nav-item"><a class="nav-link"
+					href="../Series/series.jsp">Series</a></li>
 			</ul>
 		</div>
 	</nav>
 	<%
+		String matricula = request.getParameter("Matricula");
+		Connection con = null;
+		String url = "jdbc:mysql://10.18.124.58:3306/";
+		String db = "concesionario";
+		String driver = "com.mysql.jdbc.Driver";
+		try {
+			Class.forName(driver);
+			con = DriverManager.getConnection(url + db, "ConexConcesionario", "zubiri");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		try {
 			Statement st = con.createStatement();
 			String query = "SELECT * FROM Vehiculos v, coche c WHERE (v.Matricula = c.Matricula) and v.Matricula='"
@@ -66,61 +65,62 @@
 	%>
 
 
-	
-			
-				<form method="POST" action="confirmarEditarCoches.jsp">
-					<input type="hidden" name="matricula"
-						value="<%=request.getParameter("matricula")%>">
-					<h2 align="center" style="margin-top:10px;">Editar coche</h2>
-					<table>
-						<tr>
-							<td><b>Matricula:</b></td>
-							<td><input type="text" name="maatricula"
-								value="<%=rs.getString("matricula")%>" size="15" readonly></td>
-						</tr>
-						<tr>
-							<td><b>Numero de Bastidor:</b></td>
-							<td><input type="text" name="maatricula"
-								value="<%=rs.getString("numBastidor")%>" disabled size="15"></td>
-						</tr>
-						<tr>
-							<td><b>Color:</b></td>
-							<td><input type="text" name="color" value="<%=rs.getString("color")%>" size="15"></td>
-						</tr>
-						<tr>
-							<td><b>Numero de Asientos:</b></td>
-							<td><input type="text"name="maatricula"
-								value="<%=rs.getString("numAsientos")%>" disabled size="15"></td>
-						</tr>
-						<tr>
-							<td><b>Precio:</b></td>
-							<td><input type="text"
-								name="maatricula" value="<%=rs.getString("precio")%>" disabled
-								size="15"></td>
-						</tr>
-						<tr>
-							<td><b>Numero de serie:</b></td>
-							<td><input type="text"
-								name="maatricula" value="<%=rs.getString("numSerie")%>" disabled
-								size="15"></td>
-						</tr>
-						<tr>
-							<td><b>Numero de puertas:</b></td>
-							<td><input type="text"	name="maatricula" value="<%=rs.getString("numPuertas")%>" disabled size="15"></td>
-						</tr>
-						<tr>
-							<td><b>Capacidad de maletero:</b></td>
-							<td><input type="text" name="maatricula" Value="<%=rs.getString("capacidadMaletero")%>" disabled size="15"></td>
-						</tr>
-					</table>
-					<p>
 
-						<input type="submit" value="Confirmar" name="confirmar"
-							class="btn btn-primary btn-lg"> 
-						<input type="reset"	value="Reset" name="reset" class="btn btn-primary btn-lg">
-					</p>
-				</form>
-			
+
+	<form method="POST" action="confirmarEditarCoches.jsp">
+		<input type="hidden" name="matricula"
+			value="<%=request.getParameter("matricula")%>">
+		<h2 align="center" style="margin-top: 10px;">Editar coche</h2>
+		<table>
+			<tr>
+				<td><b>Matricula:</b></td>
+				<td><input type="text" name="maatricula"
+					value="<%=rs.getString("matricula")%>" size="15" readonly></td>
+			</tr>
+			<tr>
+				<td><b>Numero de Bastidor:</b></td>
+				<td><input type="text" name="maatricula"
+					value="<%=rs.getString("numBastidor")%>" disabled size="15"></td>
+			</tr>
+			<tr>
+				<td><b>Color:</b></td>
+				<td><input type="text" name="color"
+					value="<%=rs.getString("color")%>" size="15"></td>
+			</tr>
+			<tr>
+				<td><b>Numero de Asientos:</b></td>
+				<td><input type="text" name="maatricula"
+					value="<%=rs.getString("numAsientos")%>" disabled size="15"></td>
+			</tr>
+			<tr>
+				<td><b>Precio:</b></td>
+				<td><input type="text" name="maatricula"
+					value="<%=rs.getString("precio")%>" disabled size="15"></td>
+			</tr>
+			<tr>
+				<td><b>Numero de serie:</b></td>
+				<td><input type="text" name="maatricula"
+					value="<%=rs.getString("numSerie")%>" disabled size="15"></td>
+			</tr>
+			<tr>
+				<td><b>Numero de puertas:</b></td>
+				<td><input type="text" name="maatricula"
+					value="<%=rs.getString("numPuertas")%>" disabled size="15"></td>
+			</tr>
+			<tr>
+				<td><b>Capacidad de maletero:</b></td>
+				<td><input type="text" name="maatricula"
+					Value="<%=rs.getString("capacidadMaletero")%>" disabled size="15"></td>
+			</tr>
+		</table>
+		<p>
+
+			<input type="submit" value="Confirmar" name="confirmar"
+				class="btn btn-primary btn-lg"> <input type="reset"
+				value="Reset" name="reset" class="btn btn-primary btn-lg">
+		</p>
+	</form>
+
 
 	<%
 		}

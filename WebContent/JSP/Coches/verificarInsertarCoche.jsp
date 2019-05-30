@@ -17,9 +17,9 @@
 			st = conn.createStatement();
 		} catch(Exception ex){
 		%>
-<font color="red"> 
-<h2 style=" color:red">No se puede conectar con la base de datos</h2>
-		
+<font color="red">
+	<h4>No se puede conectar con la base de datos</h4>
+
 </font>
 <%
 		}
@@ -63,12 +63,12 @@
 				</li>
 				<li class="nav-item"><a class="nav-link"
 					href="../Camiones/camiones.jsp">Camiones</a></li>
-				<li class="nav-item"><a class="nav-link" href="../Series/series.jsp">Series</a>
-				</li>
+				<li class="nav-item"><a class="nav-link"
+					href="../Series/series.jsp">Series</a></li>
 			</ul>
 		</div>
 	</nav>
-	
+
 	<!-- Page Content -->
 	<div class="container">
 		<h1>Insertar coche</h1>
@@ -93,8 +93,9 @@
 		} catch(Exception ex){
 			System.out.println(ex.getMessage());
 		%>
-		<font color="red"> <h4> No se puede añadir correctamente al coche, pruebe de nuevo.</h4>
-		
+		<font color="red">
+			<h4>No se puede añadir correctamente al coche, pruebe de nuevo.</h4>
+
 		</font>
 		<%
 		}
@@ -104,7 +105,7 @@
 				onclick="location.href='coches.jsp'">
 		</form>
 	</div>
-	
+
 
 	<!-- Bootstrap core JavaScript -->
 	<script src="vendor/jquery/jquery.min.js"></script>
