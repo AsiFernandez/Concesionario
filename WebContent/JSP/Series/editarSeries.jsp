@@ -75,7 +75,7 @@
 							<td width="50%"><b>Numero de serie:</b></td>
 							<td width="50%"><input type="text"
 								name="NumeroSerie" value="<%=rs.getString("NumSerie")%>"
-								size="15"></td>
+								size="15" readonly></td>
 						</tr>
 						<tr>
 							<td width="50%" ><b>Marca del
