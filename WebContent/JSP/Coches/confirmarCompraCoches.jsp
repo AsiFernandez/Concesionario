@@ -64,13 +64,24 @@
 			st = conn.createStatement();
 			String Query = "DELETE FROM vehiculos WHERE Matricula ='" + stringMatricula + "'";
 			st.executeUpdate(Query);
-			out.println("<p> Coche vendido correctamente. </p>");
-			out.println("<br>");
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
+		%>
+		<font size="" color="green"> <%
+ 		out.println("Se ha comprado el coche correctamente");
+		%>
+		</font>
+		<%
+		} catch (Exception ex) {
+			System.out.println(ex.getMessage());
+		%>
+		<font color="red"> <%
+ 		out.println("No se puede eliminar el coche correctamente, pruebe de nuevo.");
+ 		%>
+		</font>
+		<%
 		}
-	%>
-	<a style="font-size: 15px;" href="coches.jsp"
+		%>
+		<br>
+		<a style="font-size: 15px;" href="coches.jsp"
 		class="btn btn-primary btn-lg">Volver a la tabla coches</a>
 </body>
 </html>

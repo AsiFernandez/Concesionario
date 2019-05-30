@@ -64,12 +64,23 @@
 			st = conn.createStatement();
 			String Query = "DELETE FROM serie WHERE NumSerie ='" + numSerie + "'";
 			st.executeUpdate(Query);
-			out.println("<p> Serie eliminada </p>");
-			out.println("<br>");
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		}
-	%>
+			%>
+			<font size="" color="green"> <%
+	 		out.println("Se ha eliminado la serie correctamente");
+			%>
+			</font>
+			<%
+			} catch (Exception ex) {
+				System.out.println(ex.getMessage());
+			%>
+			<font color="red"> <%
+	 		out.println("No se puede eliminar la serie correctamente, pruebe de nuevo.");
+	 		%>
+			</font>
+			<%
+			}
+			%>
+			<br>
 	<a style="font-size: 15px;" href="series.jsp"
 		class="btn btn-primary btn-lg">Volver a la tabla series</a>
 </body>

@@ -65,24 +65,24 @@
 			String matricula2 = request.getParameter("maatricula");
 			String kolor = request.getParameter("color");
 			st.executeUpdate("UPDATE vehiculos SET color='" + kolor + "' WHERE Matricula='" + matricula2 + "'");
-	%>
-	<font size="" color="green"> <%
- 	out.println("Se ha cambiado el color del coche con matricula " + matricula2 + " al color " + kolor
+		%>
+		<font size="" color="green"> <%
+ 		out.println("Se ha cambiado el color del coche con matricula " + matricula2 + " al color " + kolor
  				+ " correctamente");
- %>
-	</font>
-	<%
+		%>
+		</font>
+		<%
 		} catch (Exception ex) {
-	%>
-	<font color="red"> <%
- 	out.println("No se puede modificar correctamente el color del coche, pruebe de nuevo.");
- %>
-	</font>
-	<%
+		%>
+		<font color="red"> <%
+ 		out.println("No se puede modificar correctamente el color del coche, pruebe de nuevo.");
+ 		%>
+		</font>
+		<%
 		}
-	%>
-	<br>
-	<a style="font-size: 15px;" href="coches.jsp"
+		%>
+		<br>
+		<a style="font-size: 15px;" href="coches.jsp"
 		class="btn btn-primary btn-lg">Volver a la tabla coches</a>
 </body>
 </html>
